@@ -1,21 +1,21 @@
 export const heroContent = {
   title: {
-    part1: "Impara",
-    highlight: "Claude Code",
-    part2: "in Un Giorno"
+    part1: "Impara lo Sviluppo Web",
+    highlight: "Full-Stack con AI",
+    part2: "in 7 Settimane"
   },
   subtitle: {
-    part1: "Un workshop live per principianti con",
-    instructor: "Dan Shipper",
-    part2: "—porta a casa un progetto funzionante e la sicurezza per usare"
+    part1: "21 ore di formazione intensiva con",
+    instructor: "Gino Jansen",
+    part2: "—Da zero a sviluppatore Full-Stack utilizzando l'AI come pair programmer"
   },
-  subtitleContinue: "Claude con il codice ogni giorno",
+  subtitleContinue: "Trasforma le tue idee in applicazioni web reali",
   description: {
-    part1: "Usa un curriculum guidato e lezioni di gruppo, lavora con supporto pratico—usando gli strumenti che Claude già conosce—come React, JavaScript, HTML e CSS.",
-    part2: "Lavora sulla tua idea di app in tempo reale. Rendila tua. Pubblicala nel mondo. Nessuna esperienza richiesta."
+    part1: "Impara React, Next.js, Node.js e database moderni mentre l'AI accelera il tuo apprendimento. Metodologia AI-first con 30% teoria, 50% pratica guidata, 20% sviluppo autonomo.",
+    part2: "Ogni lezione produce codice riutilizzabile per il tuo MVP finale. Deploy in produzione su Vercel e Digital Ocean. Nessuna esperienza richiesta."
   },
-  availability: "DICEMBRE 2024 SOLD OUT • DICEMBRE 2025 IN ESAURIMENTO",
-  cta: "Inizia e Lancia una Nuova App (È Semplice)",
-  browserTitle: "Benvenuto su Claude Code",
-  browserText: "CLAUDE CODE"
+  availability: "PROSSIMA EDIZIONE: GENNAIO 2026 • POSTI LIMITATI A 12 PARTECIPANTI",
+  cta: "Prenota il Tuo Posto",
+  browserTitle: "AI-Powered Full Stack Development",
+  browserText: "FULL STACK\nWITH AI"
 };

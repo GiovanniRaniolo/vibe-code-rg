@@ -1,19 +1,19 @@
 export const learningContent = {
-  title: "Cosa imparerai (e farai)",
+  title: "Cosa imparerai",
   items: [
-    { icon: "code", text: "Cos'è Claude Code—come usarlo partendo da zero" },
-    { icon: "target", text: "Impara strumenti e framework moderni utili" },
-    { icon: "bookOpen", text: "Esci dalla giornata usando Claude in modo concreto" },
-    { icon: "zap", text: "Distribuisci un'applicazione come un ingegnere o trasforma un'idea in realtà" }
+    { icon: "code", text: "Frontend moderno con React, Next.js e Tailwind CSS" },
+    { icon: "target", text: "Backend con Node.js, Express e API RESTful" },
+    { icon: "bookOpen", text: "Database NoSQL e SQL (MongoDB e Supabase)" },
+    { icon: "zap", text: "Deploy, CI/CD e AI come strumento quotidiano" }
   ]
 };
 
 export const dayWorkflowContent = {
-  title: "Come funziona la giornata",
+  title: "Struttura del corso",
   steps: [
-    "Impara i fondamenti—familiarizza con Claude, scopri come funziona e comprendi i concetti chiave",
-    "Pratica—una serie di esercizi per allenare le competenze chiave",
-    "Costruisci qualcosa insieme—una sessione di coding dal vivo dove costruiremo un'app",
-    "Lavora sulla tua idea—segui la nostra guida per creare un'app usando un template"
+    "7 lezioni da 3 ore ciascuna (21 ore totali)",
+    "Live coding con AI in tempo reale e prompt engineering",
+    "Esercitazioni pratiche dopo ogni modulo",
+    "Sviluppo MVP finale personalizzato con supporto continuo su Discord"
   ]
 };

@@ -3,19 +3,19 @@ export const outcomesContent = {
   items: [
     {
       type: "code",
-      text: "Entra nella giornata senza esperienza di programmazione ed esci con un'applicazione live"
+      text: "MVP completo: un'applicazione full-stack deployata e funzionante pronta per il tuo portfolio"
     },
     {
       type: "zap",
-      text: "Capisci non solo come usare Claude ma perché—impara i fondamenti che guidano quando e come usare l'AI"
+      text: "Autonomia totale: capacità di sviluppare progetti in modo indipendente con l'AI come assistente"
     },
     {
       type: "globe",
-      text: "Un'applicazione live—porta la tua visione nel mondo alla fine della giornata"
+      text: "Portfolio professionale: repository GitHub strutturato e documentato, pronto per colloqui di lavoro"
     },
     {
       type: "briefcase",
-      text: "Un percorso chiaro per costruire le tue prossime 10 applicazioni—capisci cosa ha senso come progetto AI"
+      text: "AI Mastery: padronanza completa di Cursor AI, GitHub Copilot e prompt engineering avanzato"
     }
   ]
 };

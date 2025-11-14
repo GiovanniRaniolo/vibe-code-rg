@@ -1,12 +1,12 @@
 export const pricingContent = {
-  title: "Dettagli",
+  title: "Investimento nel Tuo Futuro",
   features: {
-    type: "VIRTUALE 1:1",
-    pricing: "€2.495 €1.495",
-    duration: "10x 60 ORE"
+    type: "FORMAZIONE INTENSIVA",
+    pricing: "€1.497 €997",
+    duration: "7 LEZIONI × 3 ORE"
   },
-  price: "€1.500",
-  priceDescription: "Per la giornata",
-  priceDetails: "PAGAMENTO UNICO • UNA VOLTA SOLA • COMPLETA UN'APP REALE",
-  cta: "Iscriviti al Workshop Oggi"
+  price: "€997",
+  priceDescription: "Pagamento unico",
+  priceDetails: "21 ORE DI FORMAZIONE • MATERIALI E SUPPORTO • CERTIFICATO FINALE",
+  cta: "Prenota il Tuo Posto Ora"
 };

@@ -1,7 +1,7 @@
 export const footerContent = {
   heading: {
-    title: "Cosa Succede Dopo",
-    subtitle: "Rimani in contatto. Costruisci l'app dei tuoi sogni in un giorno"
+    title: "Inizia il Tuo Percorso",
+    subtitle: "Dopo il corso avrai le competenze per sviluppare applicazioni web moderne e continuare ad apprendere autonomamente con l'assistenza dell'AI. Il tuo MVP sarà il primo di molti progetti."
   },
   social: [
     {
@@ -35,8 +35,8 @@ export const footerContent = {
       title: "Corso",
       links: [
         { label: "Panoramica", url: "#" },
-        { label: "Curriculum", url: "#" },
-        { label: "Istruttore", url: "#" },
+        { label: "Programma", url: "#" },
+        { label: "Docente", url: "#" },
         { label: "FAQ", url: "#" }
       ]
     },
@@ -44,18 +44,18 @@ export const footerContent = {
       title: "Risorse",
       links: [
         { label: "Documentazione", url: "#" },
-        { label: "Tutorial", url: "#" },
+        { label: "GitHub Repository", url: "#" },
         { label: "Blog", url: "#" },
-        { label: "Community", url: "#" }
+        { label: "Community Discord", url: "#" }
       ]
     },
     {
-      title: "Azienda",
+      title: "Progetti",
       links: [
-        { label: "Chi siamo", url: "#" },
-        { label: "Team", url: "#" },
-        { label: "Carriere", url: "#" },
-        { label: "Contatti", url: "#" }
+        { label: "Portfolio Alumni", url: "#" },
+        { label: "MVP Showcase", url: "#" },
+        { label: "Case Studies", url: "#" },
+        { label: "Success Stories", url: "#" }
       ]
     },
     {
@@ -63,24 +63,24 @@ export const footerContent = {
       links: [
         { label: "Centro Assistenza", url: "#" },
         { label: "Contattaci", url: "#" },
-        { label: "Status", url: "#" },
-        { label: "Changelog", url: "#" }
+        { label: "Technical Setup", url: "#" },
+        { label: "Prerequisiti", url: "#" }
       ]
     },
     {
       title: "Legale",
       links: [
-        { label: "Privacy", url: "#" },
-        { label: "Termini", url: "#" },
-        { label: "Cookies", url: "#" },
-        { label: "Licenze", url: "#" }
+        { label: "Privacy Policy", url: "#" },
+        { label: "Termini di Servizio", url: "#" },
+        { label: "Cookie Policy", url: "#" },
+        { label: "Rimborsi", url: "#" }
       ]
     }
   ],
   bottom: {
-    copyright: "© 2024 Gl!tch. Tutti i diritti riservati.",
-    brandName: "Gl!tch",
-    email: "info@glitch.com",
+    copyright: "© 2025 Gl!tch Academy. Tutti i diritti riservati.",
+    brandName: "Gl!tch Academy",
+    email: "info@glitch-academy.com",
     securePayments: "Pagamenti sicuri"
   }
 };
