@@ -9,7 +9,7 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-border py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-serif tracking-wider">EV◇RY</h1>
+          <img src="/glitch_logo.png" alt="Every" className="h-8" />
         </div>
       </header>
 
@@ -350,7 +350,7 @@ const Index = () => {
       <footer className="border-t border-border py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-serif mb-2">EV◇RY</h2>
+            <img src="/glitch_logo.png" alt="Every" className="h-8 mb-2" />
             <h3 className="text-3xl font-bold mb-4">What Comes Next</h3>
             <p className="text-muted-foreground mb-8">Keep in touch. Build your dream app in one day</p>
             
