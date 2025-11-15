@@ -51,9 +51,9 @@ export const OutcomesSection = () => {
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
               className="text-center"
             >
-              <div className="mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center items-center h-12">
                 {item.type === "code" ? (
-                  <div className="pixelated-text text-4xl text-primary">AI<br/>POWERED</div>
+                  <div className="pixelated-text text-3xl text-primary whitespace-nowrap">AI POWERED</div>
                 ) : IconComponent && (
                   <IconComponent className="w-12 h-12 text-primary" />
                 )}
