@@ -65,14 +65,27 @@ export const BenefitsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="max-w-2xl mx-auto text-sm text-muted-foreground space-y-2"
+        className="max-w-3xl mx-auto"
       >
-        <p>{benefitsContent.curriculum.intro}</p>
-        <ul className="list-disc list-inside space-y-1 ml-4">
+        <p className="text-center text-muted-foreground mb-8">{benefitsContent.curriculum.intro}</p>
+        <div className="space-y-3">
           {benefitsContent.curriculum.items.map((curriculumItem, idx) => (
-            <li key={idx}>{curriculumItem}</li>
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              whileHover={{ x: 10, transition: { duration: 0.2 } }}
+              className="bg-secondary/50 border border-primary/20 rounded-lg p-4 flex items-start gap-4 group hover:border-primary/50 transition-colors"
+            >
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary group-hover:text-black transition-colors">
+                {idx + 1}
+              </div>
+              <p className="text-sm text-foreground flex-1">{curriculumItem}</p>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </motion.div>
     </section>
   );
