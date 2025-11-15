@@ -1,12 +1,12 @@
 export const heroContent = {
   title: {
-    part1: "Impara lo Sviluppo Web",
-    highlight: "Full-Stack con AI",
+    part1: "Sviluppo Web",
+    highlight: "Full-Stack con strumenti AI",
     part2: "in 7 Settimane"
   },
   subtitle: {
     part1: "21 ore di formazione intensiva con",
-    instructor: "Gino Jansen",
+    instructor: "GL!TCH",
     part2: "—Da zero a sviluppatore Full-Stack utilizzando l'AI come pair programmer"
   },
   subtitleContinue: "Trasforma le tue idee in applicazioni web reali",
