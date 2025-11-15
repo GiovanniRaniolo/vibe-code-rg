@@ -38,10 +38,10 @@ export const BrowserMockup = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1.5 }}
-        className="bg-black p-8 font-mono text-sm overflow-x-auto"
+        className="bg-black p-4 md:p-8 font-mono overflow-x-auto"
       >
-        <div className="text-primary">
-          <pre className="leading-tight">
+        <div className="text-primary scale-75 md:scale-100 origin-top-left">
+          <pre className="leading-tight text-[10px] md:text-sm">
 {`   ██████╗ ██╗     ██╗████████╗ ██████╗██╗  ██╗
   ██╔════╝ ██║     ██║╚══██╔══╝██╔════╝██║  ██║
   ██║  ███╗██║     ██║   ██║   ██║     ███████║
@@ -50,8 +50,8 @@ export const BrowserMockup = () => {
    ╚═════╝ ╚══════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝`}
           </pre>
         </div>
-        <div className="text-magenta-400 mt-2">
-          <pre className="leading-tight">
+        <div className="text-magenta-400 mt-2 scale-75 md:scale-100 origin-top-left">
+          <pre className="leading-tight text-[10px] md:text-sm">
 {`   █████╗  ██████╗ █████╗ ██████╗ ███████╗███╗   ███╗██╗   ██╗
   ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝████╗ ████║╚██╗ ██╔╝
   ███████║██║     ███████║██║  ██║█████╗  ██╔████╔██║ ╚████╔╝ 
@@ -60,15 +60,15 @@ export const BrowserMockup = () => {
   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝     ╚═╝   ╚═╝`}
           </pre>
         </div>
-        <div className="text-green-400 mt-4 text-center">
-          <pre>
+        <div className="text-green-400 mt-4 text-center scale-75 md:scale-100">
+          <pre className="text-[10px] md:text-sm">
 {`════════════════════════════════════════════════════
 ║         AI-POWERED FULL STACK TRAINING            ║
 ════════════════════════════════════════════════════`}
           </pre>
         </div>
-        <div className="text-green-400 mt-4 flex items-center">
-          <span>user@gl!tch:~$</span>
+        <div className="text-green-400 mt-4 flex items-center scale-75 md:scale-100 origin-left">
+          <span className="text-xs md:text-sm">user@gl!tch:~$</span>
           <motion.span 
             animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
