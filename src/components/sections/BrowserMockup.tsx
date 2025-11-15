@@ -38,10 +38,42 @@ export const BrowserMockup = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1.5 }}
-        className="bg-black p-8"
+        className="bg-black p-8 font-mono text-sm overflow-x-auto"
       >
-        <div className="pixelated-text text-6xl md:text-8xl text-primary leading-tight">
-          CLAUDE<br/>CODE
+        <div className="text-primary">
+          <pre className="leading-tight">
+{`   ██████╗ ██╗     ██╗████████╗ ██████╗██╗  ██╗
+  ██╔════╝ ██║     ██║╚══██╔══╝██╔════╝██║  ██║
+  ██║  ███╗██║     ██║   ██║   ██║     ███████║
+  ██║   ██║██║           ██║   ██║     ██╔══██║
+  ╚██████╔╝███████╗██║   ██║   ╚██████╗██║  ██║
+   ╚═════╝ ╚══════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝`}
+          </pre>
+        </div>
+        <div className="text-magenta-400 mt-2">
+          <pre className="leading-tight">
+{`   █████╗  ██████╗ █████╗ ██████╗ ███████╗███╗   ███╗██╗   ██╗
+  ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝████╗ ████║╚██╗ ██╔╝
+  ███████║██║     ███████║██║  ██║█████╗  ██╔████╔██║ ╚████╔╝ 
+  ██╔══██║██║     ██╔══██║██║  ██║██╔══╝  ██║╚██╔╝██║  ╚██╔╝  
+  ██║  ██║╚██████╗██║  ██║██████╔╝███████╗██║ ╚═╝ ██║   ██║   
+  ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝     ╚═╝   ╚═╝`}
+          </pre>
+        </div>
+        <div className="text-green-400 mt-4 text-center">
+          <pre>
+{`════════════════════════════════════════════════════
+║         AI-POWERED FULL STACK TRAINING            ║
+════════════════════════════════════════════════════`}
+          </pre>
+        </div>
+        <div className="text-green-400 mt-4 flex items-center">
+          <span>user@gl!tch:~$</span>
+          <motion.span 
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 1, repeat: Infinity }}
+            className="ml-1 inline-block w-2 h-4 bg-green-400"
+          />
         </div>
       </motion.div>
     </motion.div>
