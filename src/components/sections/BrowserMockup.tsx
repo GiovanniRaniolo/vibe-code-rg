@@ -7,7 +7,7 @@ export const BrowserMockup = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.8 }}
-      className="max-w-4xl mx-auto mb-8"
+      className="max-w-4xl mx-auto mb-8 px-4"
     >
       <div className="bg-secondary rounded-t-lg p-3 flex items-center gap-2">
         <div className="flex gap-1.5">

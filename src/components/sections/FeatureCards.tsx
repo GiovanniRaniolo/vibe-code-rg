@@ -30,7 +30,7 @@ export const FeatureCards = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.3 }}
-      className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16"
+      className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16 px-4"
     >
       {cardsContent.map((card) => {
         const Icon = iconMap[card.id as keyof typeof iconMap];
