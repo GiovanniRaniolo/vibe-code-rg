@@ -27,12 +27,13 @@ const iconMap = {
 
 export const BenefitsSection = () => {
   return (
-    <section className="container mx-auto px-4 py-16 bg-secondary/30">
-      <motion.h3 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+    <section className="py-16">
+      <div className="container mx-auto px-4 max-w-6xl bg-secondary/30 rounded-2xl py-12">
+        <motion.h3 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         className="text-3xl font-bold text-center mb-12"
       >
         {benefitsContent.title}
@@ -65,7 +66,7 @@ export const BenefitsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="max-w-3xl mx-auto"
+        className="max-w-4xl mx-auto"
       >
         <p className="text-center text-muted-foreground mb-8">{benefitsContent.curriculum.intro}</p>
         <div className="space-y-3">
@@ -87,6 +88,7 @@ export const BenefitsSection = () => {
           ))}
         </div>
       </motion.div>
+      </div>
     </section>
   );
 };
