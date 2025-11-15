@@ -1,7 +1,7 @@
 export const heroContent = {
   title: {
     part1: "Sviluppo Web",
-    highlight: "Full-Stack con strumenti AI",
+    highlight: "Full-Stack AI",
     part2: "in 7 Settimane"
   },
   subtitle: {
