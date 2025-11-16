@@ -40,40 +40,83 @@ export const BrowserMockup = () => {
         transition={{ duration: 0.5, delay: 1.5 }}
         className="bg-black p-4 md:p-8 font-mono overflow-hidden"
       >
-        <div className="text-primary scale-[0.65] sm:scale-75 md:scale-100 origin-top-left">
-          <pre className="leading-tight text-[9px] sm:text-[10px] md:text-sm whitespace-pre">
+        {/* Versione mobile - ASCII compatto */}
+        <div className="md:hidden">
+          <div className="text-primary">
+            <pre className="leading-tight text-[7px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
+{` ██████╗██╗     ██╗████████╗ ██████╗██╗  ██╗
+██╔════╝██║     ██║╚══██╔══╝██╔════╝██║  ██║
+██║  ██╗██║     ██║   ██║   ██║     ███████║
+██║  ██║██║     ██║   ██║   ██║     ██╔══██║
+╚██████╔╝██████╗██║   ██║   ╚██████╗██║  ██║
+ ╚═════╝ ╚═════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝`}
+            </pre>
+          </div>
+          <div className="text-magenta-400 mt-1">
+            <pre className="leading-tight text-[6.5px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
+{` █████╗  ██████╗ █████╗ ██████╗ ███████╗███╗   ███╗██╗   ██╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝████╗ ████║╚██╗ ██╔╝
+███████║██║     ███████║██║  ██║█████╗  ██╔████╔██║ ╚████╔╝ 
+██╔══██║██║     ██╔══██║██║  ██║██╔══╝  ██║╚██╔╝██║  ╚██╔╝  
+██║  ██║╚██████╗██║  ██║██████╔╝███████╗██║ ╚═╝ ██║   ██║   
+╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝     ╚═╝   ╚═╝`}
+            </pre>
+          </div>
+          <div className="text-green-400 mt-2 text-center">
+            <pre className="text-[7px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
+{`═══════════════════════════════
+║    AI-POWERED FULL STACK   ║
+║          TRAINING          ║
+═══════════════════════════════`}
+            </pre>
+          </div>
+          <div className="text-green-400 mt-2 flex items-center text-[10px]">
+            <span>user@gl!tch:~$</span>
+            <motion.span 
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 1, repeat: Infinity }}
+              className="ml-1 inline-block w-1.5 h-3 bg-green-400"
+            />
+          </div>
+        </div>
+
+        {/* Versione desktop con ASCII completo */}
+        <div className="hidden md:block">
+          <div className="text-primary">
+            <pre className="leading-tight text-sm whitespace-pre">
 {`   ██████╗ ██╗     ███╗████████╗ ██████╗██╗  ██╗
   ██╔════╝ ██║     ╚██║╚══██╔══╝██╔════╝██║  ██║
   ██║  ███╗██║      ██║   ██║   ██║     ███████║
   ██║   ██║██║      ██║   ██║   ██║     ██╔══██║
   ╚██████╔╝███████╗ ██║   ██║   ╚██████╗██║  ██║
    ╚═════╝ ╚══════╝ ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝`}
-          </pre>
-        </div>
-        <div className="text-magenta-400 mt-2 scale-[0.65] sm:scale-75 md:scale-100 origin-top-left">
-          <pre className="leading-tight text-[9px] sm:text-[10px] md:text-sm whitespace-pre">
+            </pre>
+          </div>
+          <div className="text-magenta-400 mt-2">
+            <pre className="leading-tight text-sm whitespace-pre">
 {`   █████╗  ██████╗ █████╗ ██████╗ ███████╗███╗   ███╗██╗   ██╗
   ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝████╗ ████║╚██╗ ██╔╝
   ███████║██║     ███████║██║  ██║█████╗  ██╔████╔██║ ╚████╔╝ 
   ██╔══██║██║     ██╔══██║██║  ██║██╔══╝  ██║╚██╔╝██║  ╚██╔╝  
   ██║  ██║╚██████╗██║  ██║██████╔╝███████╗██║ ╚═╝ ██║   ██║   
   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝     ╚═╝   ╚═╝`}
-          </pre>
-        </div>
-        <div className="text-green-400 mt-4 text-center scale-[0.65] sm:scale-75 md:scale-100">
-          <pre className="text-[9px] sm:text-[10px] md:text-sm whitespace-pre">
+            </pre>
+          </div>
+          <div className="text-green-400 mt-4 text-center">
+            <pre className="text-sm whitespace-pre">
 {`══════════════════════════════════════════════
 ║     AI-POWERED FULL STACK TRAINING      ║
 ══════════════════════════════════════════════`}
-          </pre>
-        </div>
-        <div className="text-green-400 mt-4 flex items-center scale-[0.65] sm:scale-75 md:scale-100 origin-left">
-          <span className="text-xs md:text-sm">user@gl!tch:~$</span>
-          <motion.span 
-            animate={{ opacity: [1, 0, 1] }}
-            transition={{ duration: 1, repeat: Infinity }}
-            className="ml-1 inline-block w-2 h-4 bg-green-400"
-          />
+            </pre>
+          </div>
+          <div className="text-green-400 mt-4 flex items-center">
+            <span className="text-sm">user@gl!tch:~$</span>
+            <motion.span 
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 1, repeat: Infinity }}
+              className="ml-1 inline-block w-2 h-4 bg-green-400"
+            />
+          </div>
         </div>
       </motion.div>
     </motion.div>
