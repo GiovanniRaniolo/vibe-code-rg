@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="container mx-auto px-4 py-16 text-center">
+    <section className="container mx-auto px-4 py-16 pb-16 text-center">
       <motion.h2 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export const HeroSection = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg mb-12">
+        <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">
           {heroContent.cta}
         </Button>
       </motion.div>
