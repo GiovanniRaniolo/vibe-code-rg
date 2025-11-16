@@ -37,5 +37,10 @@ export const benefitsContent = {
       "Lezione 6: Database MongoDB e Supabase (NoSQL/SQL, real-time, integrations)",
       "Lezione 7: Deploy, AI avanzato e MVP finale (Vercel, Digital Ocean, progetto completo)"
     ]
-  }
+  },
+  notionButton: {
+    text: "Programma Completo",
+    url: "https://www.notion.so/GL-TCH-Programma-28fabf63ca0c80aca9d0e6754512dde2"
+  },
+  exerciseLabel: "Esercitazione"
 };

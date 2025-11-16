@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Users, Code2, Zap, Target, Globe, ChevronDown } from "lucide-react";
+import { BookOpen, Users, Code2, Zap, Target, Globe, ChevronDown, Terminal } from "lucide-react";
 import { benefitsContent } from "@/content/benefits";
 import { lessonsDetails } from "@/content/lessons";
 import { useState } from "react";
@@ -121,7 +121,8 @@ export const BenefitsSection = () => {
                     {lessonDetail.exercise && (
                       <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary rounded-r-lg p-4">
                         <h4 className="font-mono text-primary text-xs mb-2 flex items-center gap-2">
-                          <span>💻</span> Esercitazione
+                          <Terminal className="w-4 h-4" />
+                          {benefitsContent.exerciseLabel}
                         </h4>
                         <p className="text-xs text-foreground">{lessonDetail.exercise}</p>
                       </div>
@@ -141,7 +142,7 @@ export const BenefitsSection = () => {
           className="mt-8 text-center"
         >
           <a 
-            href="https://www.notion.so/GL-TCH-Programma-28fabf63ca0c80aca9d0e6754512dde2"
+            href={benefitsContent.notionButton.url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,119,0,0.3)] group"
@@ -149,7 +150,7 @@ export const BenefitsSection = () => {
             <svg className="w-5 h-5 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
             </svg>
-            <span>Visualizza Programma Completo</span>
+            <span>{benefitsContent.notionButton.text}</span>
             <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
