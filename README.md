@@ -2,7 +2,7 @@
 
 ## Project info
 
-This is a landing page for the Claude Code Workshop by GL!TCH.
+This is a landing page for the Vibe Coding Workshop by GL!TCH.
 
 ## How can I edit this code?
 
