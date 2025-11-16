@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { BookOpen, Users, Code2, Zap, Target, Globe } from "lucide-react";
+import { BookOpen, Users, Code2, Zap, Target, Globe, ChevronDown } from "lucide-react";
 import { benefitsContent } from "@/content/benefits";
+import { lessonsDetails } from "@/content/lessons";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -26,6 +28,12 @@ const iconMap = {
 };
 
 export const BenefitsSection = () => {
+  const [expandedLesson, setExpandedLesson] = useState<number | null>(null);
+
+  const toggleLesson = (id: number) => {
+    setExpandedLesson(expandedLesson === id ? null : id);
+  };
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 max-w-5xl bg-secondary/30 rounded-2xl py-12">
@@ -70,22 +78,59 @@ export const BenefitsSection = () => {
       >
         <p className="text-center text-muted-foreground mb-8">{benefitsContent.curriculum.intro}</p>
         <div className="space-y-3">
-          {benefitsContent.curriculum.items.map((curriculumItem, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              whileHover={{ x: 10, transition: { duration: 0.2 } }}
-              className="bg-secondary/50 border border-primary/20 rounded-lg p-4 flex items-start gap-4 group hover:border-primary/50 transition-colors"
-            >
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary group-hover:text-black transition-colors">
-                {idx + 1}
+          {benefitsContent.curriculum.items.map((curriculumItem, idx) => {
+            const lessonDetail = lessonsDetails[idx];
+            const isExpanded = expandedLesson === idx + 1;
+            
+            return (
+              <div key={idx}>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  whileHover={{ x: 10, transition: { duration: 0.2 } }}
+                  onClick={() => toggleLesson(idx + 1)}
+                  className="bg-secondary/50 border border-primary/20 rounded-lg p-4 flex items-start gap-4 group hover:border-primary/50 transition-colors cursor-pointer"
+                >
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary group-hover:text-black transition-colors">
+                    {idx + 1}
+                  </div>
+                  <p className="text-sm text-foreground flex-1">{curriculumItem}</p>
+                  <ChevronDown 
+                    className={`w-5 h-5 text-primary transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                  />
+                </motion.div>
+
+                {isExpanded && lessonDetail && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-2 ml-12 mr-4 space-y-3"
+                  >
+                    {lessonDetail.sections.map((section, sIdx) => (
+                      <div key={sIdx} className="bg-black/20 border border-primary/10 rounded-lg p-3">
+                        <h4 className="font-mono text-primary text-xs flex items-center gap-2">
+                          <span className="text-green-400">&gt;</span>
+                          {section.title}
+                        </h4>
+                      </div>
+                    ))}
+                    {lessonDetail.exercise && (
+                      <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary rounded-r-lg p-4">
+                        <h4 className="font-mono text-primary text-xs mb-2 flex items-center gap-2">
+                          <span>💻</span> Esercitazione
+                        </h4>
+                        <p className="text-xs text-foreground">{lessonDetail.exercise}</p>
+                      </div>
+                    )}
+                  </motion.div>
+                )}
               </div>
-              <p className="text-sm text-foreground flex-1">{curriculumItem}</p>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
         
         <motion.div
