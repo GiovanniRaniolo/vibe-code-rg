@@ -15,15 +15,30 @@ export const HeroSection = () => {
         {heroContent.title.part1} <span className="text-primary">{heroContent.title.highlight}</span> {heroContent.title.part2}
       </motion.h2>
       
+      {/* Desktop Badge */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-4 py-2 mb-6"
+        className="hidden md:inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-4 py-2 mb-6"
       >
         <MapPin className="w-4 h-4 text-primary" />
         <span className="text-primary font-semibold text-sm">{heroContent.locationBadge}</span>
         <span className="text-muted-foreground text-sm">• {heroContent.location}</span>
+      </motion.div>
+      
+      {/* Mobile Badge - Stacked */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="md:hidden inline-flex flex-col items-center gap-1 bg-primary/20 border border-primary/50 rounded-2xl px-4 py-3 mb-6"
+      >
+        <div className="flex items-center gap-2">
+          <MapPin className="w-4 h-4 text-primary" />
+          <span className="text-primary font-semibold text-sm">{heroContent.locationBadge}</span>
+        </div>
+        <span className="text-muted-foreground text-xs">{heroContent.location}</span>
       </motion.div>
       
       <motion.div
