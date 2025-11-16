@@ -51,7 +51,7 @@ export const LocationSection = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold mb-1">Indirizzo</p>
+                  <p className="font-semibold mb-1">{locationContent.address.label}</p>
                   <p className="text-sm text-muted-foreground">{locationContent.address.street}</p>
                   <p className="text-sm text-muted-foreground">{locationContent.address.city}</p>
                   <p className="text-sm text-muted-foreground">{locationContent.address.country}</p>
@@ -62,7 +62,7 @@ export const LocationSection = () => {
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold mb-1">Telefono</p>
+                  <p className="font-semibold mb-1">{locationContent.contact.label}</p>
                   <a 
                     href={`tel:${locationContent.contact.phone}`}
                     className="text-sm text-primary hover:text-primary/80 transition-colors"
@@ -82,7 +82,7 @@ export const LocationSection = () => {
                 className="inline-flex items-center gap-2 bg-primary/20 hover:bg-primary/30 border border-primary/50 text-primary rounded-lg px-4 py-3 text-sm font-semibold transition-colors"
               >
                 <MapPin className="w-4 h-4" />
-                <span>Visualizza su Google Maps</span>
+                <span>{locationContent.mapButton.text}</span>
                 <ExternalLink className="w-4 h-4" />
               </motion.a>
             </motion.div>
