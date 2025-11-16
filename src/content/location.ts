@@ -3,7 +3,7 @@ export const locationContent = {
   venue: {
     name: "ERETICO",
     logo: "/eretico.png",
-    description: "Spazio dedicato alla formazione tech e all'innovazione nel cuore di Marina di Ragusa"
+    description: "Non un'aula sterile: una vineria sonica a Marina di Ragusa. Coding, convivialità e networking autentico incluso"
   },
   address: {
     label: "Indirizzo",
@@ -15,6 +15,10 @@ export const locationContent = {
     label: "Telefono",
     phone: "+39 320 1806418",
     phoneDisplay: "+39 320 180 6418"
+  },
+  social: {
+    label: "Instagram",
+    url: "https://www.instagram.com/ereticovineriasonica/"
   },
   mapButton: {
     text: "Visualizza su Google Maps"

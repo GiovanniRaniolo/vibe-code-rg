@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, ExternalLink } from "lucide-react";
+import { MapPin, Phone, ExternalLink, Instagram } from "lucide-react";
 import { locationContent } from "@/content/location";
 
 export const LocationSection = () => {
@@ -10,12 +10,12 @@ export const LocationSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto"
+        className="max-w-3xl mx-auto"
       >
         <h3 className="text-3xl font-bold text-center mb-12">{locationContent.title}</h3>
         
         <div className="bg-secondary/30 border border-primary/20 rounded-2xl p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
             {/* Logo e Nome */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -33,7 +33,20 @@ export const LocationSection = () => {
                   className="h-24 w-auto object-contain"
                 />
               </div>
-              <h4 className="text-2xl font-bold text-primary mb-4">{locationContent.venue.name}</h4>
+              <h4 className="text-2xl font-bold text-primary mb-4 flex items-center justify-center md:justify-start gap-3">
+                {locationContent.venue.name}
+                <motion.a
+                  href={locationContent.social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-primary hover:text-primary/80 transition-colors flex items-center"
+                  aria-label={locationContent.social.label}
+                >
+                  <Instagram className="w-5 h-5" />
+                </motion.a>
+              </h4>
               <p className="text-sm text-muted-foreground mb-6">
                 {locationContent.venue.description}
               </p>
@@ -48,15 +61,22 @@ export const LocationSection = () => {
               className="space-y-6"
             >
               {/* Indirizzo */}
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+              <motion.a
+                href={locationContent.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-start gap-3 group cursor-pointer"
+              >
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="font-semibold mb-1">{locationContent.address.label}</p>
-                  <p className="text-sm text-muted-foreground">{locationContent.address.street}</p>
-                  <p className="text-sm text-muted-foreground">{locationContent.address.city}</p>
-                  <p className="text-sm text-muted-foreground">{locationContent.address.country}</p>
+                  <p className="font-semibold mb-1 group-hover:text-primary transition-colors">{locationContent.address.label}</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{locationContent.address.street}</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{locationContent.address.city}</p>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{locationContent.address.country}</p>
                 </div>
-              </div>
+              </motion.a>
 
               {/* Telefono */}
               <div className="flex items-start gap-3">
@@ -71,20 +91,6 @@ export const LocationSection = () => {
                   </a>
                 </div>
               </div>
-
-              {/* Link Mappa */}
-              <motion.a
-                href={locationContent.mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 bg-primary/20 hover:bg-primary/30 border border-primary/50 text-primary rounded-lg px-4 py-3 text-sm font-semibold transition-colors"
-              >
-                <MapPin className="w-4 h-4" />
-                <span>{locationContent.mapButton.text}</span>
-                <ExternalLink className="w-4 h-4" />
-              </motion.a>
             </motion.div>
           </div>
         </div>
