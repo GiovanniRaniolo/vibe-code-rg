@@ -9,7 +9,7 @@ export const faqContent = {
     {
       id: "item-2",
       question: "Dove si tiene il corso?",
-      answer: "Il corso si tiene IN PRESENZA a Marina di Ragusa (RG) presso Eretico, in via Benedetto Brin 13. Uno spazio moderno dedicato alla formazione tech, perfetto per l'apprendimento collaborativo. Per info: +39 320 180 6418"
+      answer: "Il corso si tiene IN PRESENZA a Marina di Ragusa (RG) presso Eretico (via Benedetto Brin 13), una vineria sonica che diventa il tuo spazio tech. Non un'aula sterile: coding, convivialità e networking autentico. Per info: +39 320 180 6418"
     },
     {
       id: "item-3",
