@@ -28,7 +28,7 @@ const iconMap = {
 export const BenefitsSection = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4 max-w-6xl bg-secondary/30 rounded-2xl py-12">
+      <div className="container mx-auto px-4 max-w-5xl bg-secondary/30 rounded-2xl py-12">
         <motion.h3 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
