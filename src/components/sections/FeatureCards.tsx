@@ -40,7 +40,7 @@ export const FeatureCards = () => {
             variants={fadeInUp}
             whileHover={{ y: -10, transition: { duration: 0.3 } }}
           >
-            <Card className="bg-secondary border-border overflow-hidden h-full flex flex-col">
+            <Card className="bg-secondary border border-primary/20 overflow-hidden h-full flex flex-col">
               <div className="aspect-video bg-gradient-to-br from-primary/20 via-primary/10 to-transparent relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,119,0,0.1),transparent_50%)]" />
                 <motion.div

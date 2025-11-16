@@ -43,7 +43,7 @@ export const PricingSection = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="bg-secondary border-border p-8 mb-8">
+          <Card className="bg-secondary border border-primary/20 p-8 mb-8">
             <motion.div 
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
