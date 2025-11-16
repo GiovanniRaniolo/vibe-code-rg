@@ -32,15 +32,6 @@ export const footerContent = {
   ],
   navigation: [
     {
-      title: "Corso",
-      links: [
-        { label: "Panoramica", url: "#" },
-        { label: "Programma", url: "#" },
-        { label: "Docente", url: "#" },
-        { label: "FAQ", url: "#" }
-      ]
-    },
-    {
       title: "Risorse",
       links: [
         { label: "Documentazione", url: "#" },
@@ -65,6 +56,15 @@ export const footerContent = {
         { label: "Contattaci", url: "#" },
         { label: "Technical Setup", url: "#" },
         { label: "Prerequisiti", url: "#" }
+      ]
+    },
+    {
+      title: "Location",
+      links: [
+        { label: "ERETICO", url: "https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+13+Marina+di+Ragusa+RG+Italia" },
+        { label: "via Benedetto Brin, 13", url: "https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+13+Marina+di+Ragusa+RG+Italia" },
+        { label: "Marina di Ragusa (RG)", url: "https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+13+Marina+di+Ragusa+RG+Italia" },
+        { label: "+39 320 180 6418", url: "tel:+393201806418" }
       ]
     },
     {
