@@ -96,7 +96,7 @@ export const BenefitsSection = () => {
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary group-hover:text-black transition-colors">
                     {idx + 1}
                   </div>
-                  <p className="text-sm text-foreground flex-1">{curriculumItem}</p>
+                  <p className="text-base text-foreground flex-1">{curriculumItem}</p>
                   <ChevronDown 
                     className={`w-5 h-5 text-primary transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
                   />
@@ -112,7 +112,7 @@ export const BenefitsSection = () => {
                   >
                     {lessonDetail.sections.map((section, sIdx) => (
                       <div key={sIdx} className="bg-black/20 border border-primary/10 rounded-lg p-3">
-                        <h4 className="font-mono text-primary text-xs flex items-center gap-2">
+                        <h4 className="font-mono text-primary text-sm flex items-center gap-2">
                           <span className="text-green-400">&gt;</span>
                           {section.title}
                         </h4>
@@ -120,11 +120,11 @@ export const BenefitsSection = () => {
                     ))}
                     {lessonDetail.exercise && (
                       <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary rounded-r-lg p-4">
-                        <h4 className="font-mono text-primary text-xs mb-2 flex items-center gap-2">
+                        <h4 className="font-mono text-primary text-sm mb-2 flex items-center gap-2">
                           <Terminal className="w-4 h-4" />
                           {benefitsContent.exerciseLabel}
                         </h4>
-                        <p className="text-xs text-foreground">{lessonDetail.exercise}</p>
+                        <p className="text-sm text-foreground">{lessonDetail.exercise}</p>
                       </div>
                     )}
                   </motion.div>
