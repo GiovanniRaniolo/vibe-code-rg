@@ -25,13 +25,17 @@ export const LocationSection = () => {
               className="text-center md:text-left"
             >
               <div className="mb-6 flex justify-center md:justify-start">
-                <motion.img
+                <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  src={locationContent.venue.logo}
-                  alt={locationContent.venue.name}
-                  className="h-24 w-auto object-contain"
-                />
+                  className="p-1.5 rounded-full border-2 border-primary/50 bg-secondary/30"
+                >
+                  <img
+                    src={locationContent.venue.logo}
+                    alt={locationContent.venue.name}
+                    className="h-24 w-24 object-contain rounded-full"
+                  />
+                </motion.div>
               </div>
               <h4 className="text-2xl font-bold text-primary mb-4 flex items-center justify-center md:justify-start gap-3">
                 {locationContent.venue.name}

@@ -6,17 +6,6 @@ import { MapPin } from "lucide-react";
 export const HeroSection = () => {
   return (
     <section className="container mx-auto px-4 py-16 text-center">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-4 py-2 mb-6"
-      >
-        <MapPin className="w-4 h-4 text-primary" />
-        <span className="text-primary font-semibold text-sm">{heroContent.locationBadge}</span>
-        <span className="text-muted-foreground text-sm">• {heroContent.location}</span>
-      </motion.div>
-      
       <motion.h2 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,9 +16,20 @@ export const HeroSection = () => {
       </motion.h2>
       
       <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-4 py-2 mb-6"
+      >
+        <MapPin className="w-4 h-4 text-primary" />
+        <span className="text-primary font-semibold text-sm">{heroContent.locationBadge}</span>
+        <span className="text-muted-foreground text-sm">• {heroContent.location}</span>
+      </motion.div>
+      
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
       >
         <p className="text-xl mb-4">
           {heroContent.subtitle.part1} <span className="font-semibold">{heroContent.subtitle.instructor}</span>{heroContent.subtitle.part2}
@@ -51,7 +51,7 @@ export const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >

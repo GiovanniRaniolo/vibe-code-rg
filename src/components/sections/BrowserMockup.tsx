@@ -41,9 +41,9 @@ export const BrowserMockup = () => {
         className="bg-black p-4 md:p-8 font-mono overflow-hidden"
       >
         {/* Versione mobile - ASCII compatto */}
-        <div className="md:hidden">
-          <div className="text-primary">
-            <pre className="leading-tight text-[7px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
+        <div className="md:hidden overflow-x-hidden max-w-full">
+          <div className="text-primary overflow-x-hidden">
+            <pre className="leading-tight text-[7px] max-w-full" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
 {` ██████╗██╗     ██╗████████╗ ██████╗██╗  ██╗
 ██╔════╝██║     ██║╚══██╔══╝██╔════╝██║  ██║
 ██║  ██╗██║     ██║   ██║   ██║     ███████║
@@ -52,8 +52,8 @@ export const BrowserMockup = () => {
  ╚═════╝ ╚═════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝`}
             </pre>
           </div>
-          <div className="text-magenta-400 mt-1">
-            <pre className="leading-tight text-[6.5px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
+          <div className="text-magenta-400 mt-1 overflow-x-hidden">
+            <pre className="leading-tight text-[6.5px] max-w-full" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
 {` █████╗  ██████╗ █████╗ ██████╗ ███████╗███╗   ███╗██╗   ██╗
 ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝████╗ ████║╚██╗ ██╔╝
 ███████║██║     ███████║██║  ██║█████╗  ██╔████╔██║ ╚████╔╝ 
@@ -65,8 +65,8 @@ export const BrowserMockup = () => {
           <div className="text-green-400 mt-2 text-center">
             <pre className="text-[7px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
 {`═══════════════════════════════
-║    AI-POWERED FULL STACK   ║
-║          TRAINING          ║
+     AI-POWERED FULL STACK   
+           TRAINING          
 ═══════════════════════════════`}
             </pre>
           </div>
