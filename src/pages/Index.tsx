@@ -8,6 +8,7 @@ import {
   OutcomesSection,
   BenefitsSection,
   PricingSection,
+  LocationSection,
   FAQSection,
   Footer
 } from "@/components/sections";
@@ -27,6 +28,7 @@ const Index = () => {
       <OutcomesSection />
       <BenefitsSection />
       <PricingSection />
+      <LocationSection />
       <FAQSection />
       
       <Footer />

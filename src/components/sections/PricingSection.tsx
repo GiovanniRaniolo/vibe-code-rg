@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { pricingContent } from "@/content/pricing";
+import { Users } from "lucide-react";
 
 export const PricingSection = () => {
   return (
@@ -14,6 +15,18 @@ export const PricingSection = () => {
         className="max-w-md mx-auto"
       >
         <h3 className="text-2xl font-bold mb-2">{pricingContent.title}</h3>
+        
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-4 py-2 mb-6"
+        >
+          <Users className="w-4 h-4 text-primary" />
+          <span className="text-primary font-semibold text-sm">{pricingContent.inPersonBadge}</span>
+        </motion.div>
+        
         <div className="flex justify-center gap-8 text-sm mb-8">
           <div>
             <span className="font-semibold">{pricingContent.features.type}</span>

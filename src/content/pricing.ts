@@ -1,5 +1,6 @@
 export const pricingContent = {
   title: "Investimento nel Tuo Futuro",
+  inPersonBadge: "FORMAZIONE IN PRESENZA",
   features: {
     type: "FORMAZIONE INTENSIVA",
     pricing: "€1.497 €997",
@@ -7,6 +8,6 @@ export const pricingContent = {
   },
   price: "€997",
   priceDescription: "Pagamento unico",
-  priceDetails: "21 ORE DI FORMAZIONE • MATERIALI E SUPPORTO • CERTIFICATO FINALE",
+  priceDetails: "21 ORE DI FORMAZIONE IN AULA • MATERIALI E SUPPORTO • CERTIFICATO FINALE",
   cta: "Prenota il Tuo Posto Ora"
 };

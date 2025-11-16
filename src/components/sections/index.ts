@@ -7,5 +7,6 @@ export { LearningSection } from './LearningSection';
 export { OutcomesSection } from './OutcomesSection';
 export { BenefitsSection } from './BenefitsSection';
 export { PricingSection } from './PricingSection';
+export { LocationSection } from './LocationSection';
 export { FAQSection } from './FAQSection';
 export { Footer } from './Footer';
