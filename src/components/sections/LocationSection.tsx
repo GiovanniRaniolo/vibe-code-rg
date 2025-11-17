@@ -47,8 +47,8 @@ export const LocationSection = () => {
                         className="h-28 w-28 md:h-30 md:w-30 object-contain rounded-full"
                       />
                     </motion.div>
-                    <h4 className="text-2xl font-bold text-primary flex items-center gap-3">
-                      <Wine className="w-6 h-6 text-primary" />
+                    <h4 className="text-3xl font-bold text-primary flex items-center gap-3">
+                      <Wine className="w-7 h-7 text-primary" />
                       {locationContent.venue.name}
                     </h4>
                   </div>
