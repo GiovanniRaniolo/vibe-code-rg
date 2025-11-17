@@ -1,55 +1,61 @@
 export const faqContent = {
-  title: "Domande frequenti",
-  questions: [
+  title: "Domande Frequenti",
+  subtitle: "Tutto quello che devi sapere prima di iniziare",
+  
+  essentialQuestions: [
     {
       id: "item-1",
       question: "Serve esperienza di programmazione?",
-      answer: "No, il corso parte da zero assoluto. Se non hai mai scritto una riga di codice, sei nel posto giusto. Inizieremo dalle basi di HTML/CSS e costruiremo progressivamente fino a sviluppare applicazioni full-stack complete."
+      answer: "Zero esperienza richiesta. Il corso parte dalle basi assolute di HTML/CSS. Se non hai mai scritto codice, sei nel target perfetto. La metodologia AI-first accelera l'apprendimento: l'AI gestisce la sintassi, tu impari la logica."
     },
     {
       id: "item-2",
-      question: "Dove si tiene il corso?",
-      answer: "Il corso si tiene IN PRESENZA a Marina di Ragusa (RG) presso Eretico (via Benedetto Brin 13), una vineria sonica che diventa il tuo spazio tech. Non un'aula sterile: coding, convivialità e networking autentico. Per info: +39 320 180 6418"
+      question: "Dove si tiene il corso e quando?",
+      answer: "IN PRESENZA a Marina di Ragusa (RG) presso Eretico, via Benedetto Brin 13—una vineria sonica trasformata in hub tech. Prima edizione: Gennaio 2026, date definitive comunicate agli iscritti. Info: +39 320 180 6418"
     },
     {
       id: "item-3",
-      question: "Quanto tempo devo dedicare oltre le lezioni?",
-      answer: "Si consiglia di dedicare 2-4 ore settimanali per completare le esercitazioni pratiche. Ogni lezione include un'esercitazione che consolida le competenze apprese e prepara il terreno per la lezione successiva."
+      question: "Cosa succede se perdo una lezione?",
+      answer: "Accesso lifetime alle registrazioni per recuperare. Ma consiglio forte: partecipa live per code review in tempo reale, debugging assistito e networking con gli altri partecipanti. Il valore è nella presenza."
     },
     {
       id: "item-4",
-      question: "Che computer mi serve?",
-      answer: "Serve un laptop con minimo 8GB di RAM. Il corso funziona perfettamente su Windows, Mac e Linux. Ti forniremo una guida dettagliata per il setup dell'ambiente di sviluppo nella prima lezione."
+      question: "Quali AI tool useremo esattamente?",
+      answer: "Cursor AI (IDE AI-powered principale), GitHub Copilot per autocomplete, Claude per problem solving complesso. Insegniamo prompt engineering avanzato per ciascuno: quando usare quale tool, come iterare sui prompt, come debuggare output AI."
     },
     {
       id: "item-5",
-      question: "Cosa succede se perdo una lezione?",
-      answer: "Tutte le lezioni in presenza vengono registrate e avrai accesso lifetime alle registrazioni. Questo ti permette di recuperare eventuali assenze e rivedere i concetti. Tuttavia, consigliamo vivamente di partecipare dal vivo per poter fare domande in tempo reale e beneficiare del supporto diretto in aula."
+      question: "Cosa succede se non completo il MVP in tempo?",
+      answer: "Supporto esteso fino al deploy finale. Community Discord resta attiva lifetime, il docente fa code review anche post-corso fino al completamento. Non c'è deadline dura: l'importante è finire bene, non veloce."
     },
     {
       id: "item-6",
-      question: "Cosa succede se non riesco a completare il MVP?",
-      answer: "Offriamo supporto esteso fino al completamento del tuo MVP. Avrai accesso alla community Discord anche dopo la fine del corso e il docente fornirà code review e feedback fino al deploy finale."
+      question: "C'è supporto dopo il corso?",
+      answer: "Community Discord lifetime: Q&A, project reviews, networking con alumni. Aggiornamenti sui nuovi AI tools e best practices. Il docente resta disponibile per consulenze spot. Non ti lasciamo solo dopo week 7."
     },
     {
       id: "item-7",
-      question: "Rilasciate un certificato?",
-      answer: "Sì! Dopo il completamento del MVP e la presentazione finale, riceverai un certificato di completamento che attesta le competenze acquisite in sviluppo full-stack e AI-assisted development."
+      question: "Quanto tempo serve oltre le 21 ore in aula?",
+      answer: "Consigliati 2-4 ore settimanali per completare le esercitazioni. Ogni lezione ha un project assignment che consolida le skill e prepara la settimana successiva. Il tempo extra è flessibile: puoi fare di più se vuoi accelerare."
     },
     {
       id: "item-8",
-      question: "Posso usare il progetto finale per il mio portfolio?",
-      answer: "Assolutamente sì! Il progetto MVP che svilupperai è completamente tuo al 100%. Sarà deployato, documentato e ottimizzato per essere presentato in colloqui di lavoro o a potenziali clienti."
-    },
-    {
-      id: "item-9",
-      question: "Che strumenti AI useremo?",
-      answer: "Utilizzeremo principalmente Cursor AI (il più potente IDE AI-powered), GitHub Copilot per code completion e Claude per problem solving complesso. Ti insegneremo prompt engineering avanzato per ciascuno di questi strumenti."
-    },
-    {
-      id: "item-10",
-      question: "C'è supporto dopo il corso?",
-      answer: "Sì! Avrai accesso lifetime alla community Discord privata dove potrai continuare a fare domande, condividere progetti e ricevere supporto da docente e alumni. Include anche aggiornamenti sui nuovi tool AI e best practices."
+      question: "Il mio MVP sarà veramente pronto per il portfolio?",
+      answer: "Sì. Deployato in produzione (Vercel/Digital Ocean), repository GitHub documentato, code review finale dal docente. È il tuo progetto al 100%, ottimizzato per essere mostrato in colloqui o a clienti."
     }
-  ]
+  ],
+  
+  moreQuestions: [],
+  
+  guarantee: {
+    title: "Garanzia Soddisfatti o Rimborsati",
+    description: "Partecipa alle prime 2 lezioni. Se decidi che il corso non fa per te, rimborso completo entro fine Lezione 2. No questions asked, no hard feelings.",
+    badge: "100% RISK-FREE"
+  },
+  
+  contact: {
+    text: "Altre domande?",
+    cta: "Scrivici su WhatsApp",
+    phone: "+39 320 180 6418"
+  }
 };
