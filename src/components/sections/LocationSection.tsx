@@ -35,11 +35,11 @@ export const LocationSection = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="text-center md:text-left"
                 >
-                  <div className="mb-6 flex justify-center md:justify-start">
+                  <div className="mb-6 flex items-center justify-center md:justify-start gap-4">
                     <motion.div
                       whileHover={{ scale: 1.05, rotate: 5 }}
                       transition={{ duration: 0.3 }}
-                      className="p-3 rounded-full border-2 border-primary/50 bg-secondary/30 shadow-lg shadow-primary/20"
+                      className="p-3 rounded-full border-2 border-primary/50 bg-secondary/30 shadow-lg shadow-primary/20 flex-shrink-0"
                     >
                       <img
                         src={locationContent.venue.logo}
@@ -47,11 +47,11 @@ export const LocationSection = () => {
                         className="h-28 w-28 md:h-30 md:w-30 object-contain rounded-full"
                       />
                     </motion.div>
+                    <h4 className="text-2xl font-bold text-primary flex items-center gap-3">
+                      <Wine className="w-6 h-6 text-primary" />
+                      {locationContent.venue.name}
+                    </h4>
                   </div>
-                  <h4 className="text-2xl font-bold text-primary mb-3 flex items-center justify-center md:justify-start gap-3">
-                    <Wine className="w-6 h-6 text-primary" />
-                    {locationContent.venue.name}
-                  </h4>
                   <p className="text-sm text-muted-foreground">
                     {locationContent.venue.description}
                   </p>
