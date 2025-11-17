@@ -54,8 +54,8 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
         { value: timeLeft.seconds, label: "Sec" }
       ].map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
-          <div className="bg-primary/20 border border-primary/40 rounded-lg px-3 py-2 min-w-[60px]">
-            <span className="text-2xl font-bold text-primary">
+          <div className="bg-primary/20 border border-primary/40 rounded-lg min-w-[60px] h-[60px] flex items-center justify-center">
+            <span className="text-2xl font-bold text-primary tabular-nums">
               {String(item.value).padStart(2, '0')}
             </span>
           </div>
