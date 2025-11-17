@@ -7,7 +7,7 @@ export const heroContent = {
   subtitle: {
     part1: "21 ore di formazione intensiva con",
     instructor: "GL!TCH",
-    part2: "—Da Zero Coding a Primo MVP Deployato"
+    part2: " - Da Zero Coding a Primo MVP Deployato"
   },
   subtitleContinue: "7 progetti live, 1 MVP personalizzato, autonomia completa con AI",
   description: {
