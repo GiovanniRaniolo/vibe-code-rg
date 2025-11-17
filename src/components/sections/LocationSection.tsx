@@ -26,7 +26,7 @@ export const LocationSection = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
             
             <div className="relative z-10">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Logo e Nome */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -63,39 +63,42 @@ export const LocationSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="space-y-4"
+                  className="space-y-6 md:pt-6"
                 >
-                  {/* Indirizzo */}
-                  <motion.div
-                    whileHover={{ x: 4 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex items-start gap-3 group"
-                  >
-                    <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
-                    <div>
-                      <p className="font-semibold mb-1 group-hover:text-primary transition-colors">{locationContent.address.label}</p>
-                      <p className="text-sm text-muted-foreground">{locationContent.address.street}</p>
-                      <p className="text-sm text-muted-foreground">{locationContent.address.city}</p>
-                      <p className="text-sm text-muted-foreground">{locationContent.address.country}</p>
-                    </div>
-                  </motion.div>
+                  {/* Indirizzo e Telefono affiancati */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* Indirizzo */}
+                    <motion.div
+                      whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex items-start gap-3 group"
+                    >
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                      <div>
+                        <p className="font-semibold mb-1 group-hover:text-primary transition-colors">{locationContent.address.label}</p>
+                        <p className="text-sm text-muted-foreground">{locationContent.address.street}</p>
+                        <p className="text-sm text-muted-foreground">{locationContent.address.city}</p>
+                        <p className="text-sm text-muted-foreground">{locationContent.address.country}</p>
+                      </div>
+                    </motion.div>
 
-                  {/* Telefono */}
-                  <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">{locationContent.contact.label}</p>
-                      <a 
-                        href={`tel:${locationContent.contact.phone}`}
-                        className="text-sm text-primary hover:text-primary/80 transition-colors"
-                      >
-                        {locationContent.contact.phoneDisplay}
-                      </a>
+                    {/* Telefono */}
+                    <div className="flex items-start gap-3">
+                      <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold mb-1">{locationContent.contact.label}</p>
+                        <a 
+                          href={`tel:${locationContent.contact.phone}`}
+                          className="text-sm text-primary hover:text-primary/80 transition-colors"
+                        >
+                          {locationContent.contact.phoneDisplay}
+                        </a>
+                      </div>
                     </div>
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex gap-3 pt-2">
+                  <div className="flex gap-3 pt-4 md:pt-6">
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
