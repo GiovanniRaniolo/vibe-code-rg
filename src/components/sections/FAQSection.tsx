@@ -53,7 +53,7 @@ export const FAQSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-6"
+            className="space-y-6 lg:pt-4"
           >
             {/* Guarantee Box */}
             <div className="bg-gradient-to-br from-primary/10 to-secondary border-2 border-primary/30 rounded-xl p-6">
@@ -73,15 +73,12 @@ export const FAQSection = () => {
 
             {/* Contact Box */}
             <div className="bg-card border border-primary/20 rounded-xl p-6">
-              <div className="flex items-center gap-2 mb-3">
+              <div className="flex items-center gap-2 mb-4">
                 <MessageCircle className="w-5 h-5 text-primary" />
                 <h4 className="font-bold">
                   {faqContent.contact.text}
                 </h4>
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Parla direttamente con noi
-              </p>
               <a
                 href={`https://wa.me/${faqContent.contact.phone.replace(/\s/g, '')}`}
                 target="_blank"
