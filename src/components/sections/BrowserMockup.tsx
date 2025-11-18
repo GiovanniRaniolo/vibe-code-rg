@@ -40,36 +40,13 @@ export const BrowserMockup = () => {
         transition={{ duration: 0.5, delay: 1.5 }}
         className="bg-black p-4 md:p-8 font-mono overflow-hidden"
       >
-        {/* Versione mobile - ASCII compatto */}
+        {/* Versione mobile - Immagine statica */}
         <div className="md:hidden overflow-x-hidden max-w-full">
-          <div className="text-primary overflow-x-hidden">
-            <pre className="leading-tight text-[7px] max-w-full" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
-{` ██████╗██╗     ██╗████████╗ ██████╗██╗  ██╗
-██╔════╝██║     ██║╚══██╔══╝██╔════╝██║  ██║
-██║  ██╗██║     ██║   ██║   ██║     ███████║
-██║  ██║██║           ██║   ██║     ██╔══██║
-╚██████╔╝██████╗██║   ██║   ╚██████╗██║  ██║
- ╚═════╝ ╚═════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝`}
-            </pre>
-          </div>
-          <div className="text-magenta-400 mt-1 overflow-x-hidden">
-            <pre className="leading-tight text-[6.5px] max-w-full" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
-{` █████╗  ██████╗ █████╗ ██████╗ ███████╗███╗   ███╗██╗   ██╗
-██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝████╗ ████║╚██╗ ██╔╝
-███████║██║     ███████║██║  ██║█████╗  ██╔████╔██║ ╚████╔╝ 
-██╔══██║██║     ██╔══██║██║  ██║██╔══╝  ██║╚██╔╝██║  ╚██╔╝  
-██║  ██║╚██████╗██║  ██║██████╔╝███████╗██║ ╚═╝ ██║   ██║   
-╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝     ╚═╝   ╚═╝`}
-            </pre>
-          </div>
-          <div className="text-green-400 mt-2 text-center">
-            <pre className="text-[7px]" style={{ fontFamily: 'Courier New, monospace', letterSpacing: '-0.5px' }}>
-{`═══════════════════════════════
-     AI-POWERED FULL STACK   
-           TRAINING          
-═══════════════════════════════`}
-            </pre>
-          </div>
+          <img 
+            src="/terminal-ascii.png" 
+            alt="GL!TCH Academy Terminal" 
+            className="w-full h-auto"
+          />
           <div className="text-green-400 mt-2 flex items-center text-[10px]">
             <span>user@gl!tch:~$</span>
             <motion.span 
