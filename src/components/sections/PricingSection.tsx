@@ -46,7 +46,7 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
   }
 
   return (
-    <div className="flex justify-center gap-3">
+    <div className="flex justify-center gap-2 sm:gap-3">
       {[
         { value: timeLeft.days, label: "Giorni" },
         { value: timeLeft.hours, label: "Ore" },
@@ -54,8 +54,8 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
         { value: timeLeft.seconds, label: "Sec" }
       ].map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
-          <div className="bg-primary/20 border border-primary/40 rounded-lg min-w-[60px] h-[60px] flex items-center justify-center">
-            <span className="text-2xl font-bold text-primary tabular-nums">
+          <div className="bg-primary/20 border border-primary/40 rounded-lg min-w-[52px] sm:min-w-[60px] h-[52px] sm:h-[60px] flex items-center justify-center">
+            <span className="text-xl sm:text-2xl font-bold text-primary tabular-nums">
               {String(item.value).padStart(2, '0')}
             </span>
           </div>
@@ -71,7 +71,7 @@ export const PricingSection = () => {
   const progressPercentage = ((pricingContent.urgency?.availability.booked || 0) / (pricingContent.urgency?.availability.total || 12)) * 100;
 
   return (
-    <section className="container mx-auto px-4 py-20">
+    <section className="container mx-auto px-4 py-20 overflow-x-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div 
