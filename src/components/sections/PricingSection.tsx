@@ -96,7 +96,7 @@ export const PricingSection = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <Card className="bg-gradient-to-br from-card to-secondary border-2 border-primary/30 p-8 relative overflow-hidden">
+            <Card className="bg-gradient-to-br from-card to-secondary border-2 border-primary/30 p-4 sm:p-8 relative overflow-hidden">
               {/* Early Bird Badge */}
               {pricingContent.urgency?.countdown.enabled && (
                 <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:left-auto sm:right-4 sm:translate-x-0 z-10">

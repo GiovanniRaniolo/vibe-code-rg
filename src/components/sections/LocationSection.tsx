@@ -44,7 +44,7 @@ export const LocationSection = () => {
                       <img
                         src={locationContent.venue.logo}
                         alt={locationContent.venue.name}
-                        className="h-28 w-28 md:h-30 md:w-30 object-contain rounded-full"
+                        className="h-24 w-24 md:h-30 md:w-30 object-contain rounded-full"
                       />
                     </motion.div>
                     <h4 className="text-3xl font-bold text-primary flex items-center gap-3">
