@@ -6,7 +6,7 @@ export const heroContent = {
   },
   tagline: "Da Zero Coding a Primo MVP Deployato",
   instructor: "Formazione intensiva con GL!TCH",
-  subtitle: "7 progetti live + 1 MVP personalizzato deployato in produzione",
+  subtitle: "7 progetti live + 1 MVP personalizzato in produzione",
   description: "Impara React, Next.js, Node.js e database con metodologia AI-first. Codifica 10x più veloce, zero esperienza richiesta. Setup completo fino al deploy su Vercel.",
   badges: {
     location: "Marina di Ragusa, Sicilia",

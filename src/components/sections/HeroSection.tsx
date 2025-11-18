@@ -37,10 +37,6 @@ export const HeroSection = () => {
         transition={{ duration: 0.5, delay: 0.6 }}
         className="flex flex-wrap justify-center gap-2 mb-6"
       >
-        <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-3 py-1.5 shadow-lg shadow-primary/20">
-          <MapPin className="w-3.5 h-3.5 text-primary" />
-          <span className="text-primary font-semibold text-xs">{heroContent.badges.location}</span>
-        </div>
         <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-3 py-1.5">
           <Calendar className="w-3.5 h-3.5 text-primary" />
           <span className="text-xs font-medium">{heroContent.badges.format}</span>
@@ -48,6 +44,10 @@ export const HeroSection = () => {
         <div className="inline-flex items-center gap-2 bg-secondary/50 border border-primary/20 rounded-full px-3 py-1.5">
           <Zap className="w-3.5 h-3.5 text-primary" />
           <span className="text-xs font-medium">{heroContent.badges.duration}</span>
+        </div>
+        <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-3 py-1.5 shadow-lg shadow-primary/20">
+          <MapPin className="w-3.5 h-3.5 text-primary" />
+          <span className="text-primary font-semibold text-xs">{heroContent.badges.location}</span>
         </div>
       </motion.div>
       
@@ -57,13 +57,8 @@ export const HeroSection = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
         className="space-y-6 mb-8"
       >
-        {/* Tagline principale */}
-        <h3 className="text-xl md:text-2xl font-bold">
-          {heroContent.tagline}
-        </h3>
-        
         {/* Instructor badge */}
-        <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+        <div className="inline-flex items-center gap-2 text-base md:text-lg text-muted-foreground">
           <span>{heroContent.instructor}</span>
         </div>
         
