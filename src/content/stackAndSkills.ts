@@ -25,7 +25,7 @@ export const stackAndSkillsContent = {
     {
       icon: "zap",
       title: "AI-Powered Workflow",
-      description: "Cursor AI per code generation, GitHub Copilot per autocomplete, Claude per problem solving, prompt engineering avanzato, MCP protocol.",
+      description: "GitHub Copilot e Cursor AI per code generation, autocomplete eproblem solving, prompt engineering avanzato, MCP protocol.",
       technologies: ["Cursor AI", "GitHub Copilot", "Prompt Engineering"]
     }
   ],
