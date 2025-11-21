@@ -21,7 +21,7 @@ export const faqContent = {
     {
       id: "item-4",
       question: "Quali AI tool useremo esattamente?",
-      answer: "Cursor AI (IDE AI-powered principale), GitHub Copilot per autocomplete, Claude per problem solving complesso. Insegniamo prompt engineering avanzato per ciascuno: quando usare quale tool, come iterare sui prompt, come debuggare output AI."
+      answer: "VS Code con GitHub Copilot (IDE principale) e Cursor AI, più Claude per problem solving complesso. Insegniamo prompt engineering avanzato per ciascuno: quando usare quale tool, come iterare sui prompt, come debuggare output AI."
     },
     {
       id: "item-5",

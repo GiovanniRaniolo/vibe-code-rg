@@ -7,7 +7,7 @@ export const transformationContent = {
     {
       week: "Settimana 1-2",
       title: "Fondamenti Solidi",
-      description: "Setup Cursor AI, HTML/CSS responsive, JavaScript ES6+, async/await, DOM manipulation, Git workflow base.",
+      description: "Setup VS Code + GitHub Copilot e Cursor AI, HTML/CSS responsive, JavaScript ES6+, async/await, DOM manipulation, Git workflow base.",
       deliverable: "Landing page responsive + Todo app con Local Storage",
       technologies: ["HTML5", "CSS3", "JavaScript", "Git"]
     },

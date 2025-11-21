@@ -4,7 +4,7 @@ export const benefitsContent = {
   curriculum: {
     intro: "Dal setup AI al tuo MVP deployato in 7 settimane:",
     items: [
-      "Lezione 1: Fondamenti e Setup AI (HTML/CSS responsive, Cursor AI, primo deploy)",
+      "Lezione 1: Fondamenti e Setup AI (HTML/CSS responsive, VS Code + Copilot e Cursor, primo deploy)",
       "Lezione 2: JavaScript ES6+ e Git (async/await, DOM, todo app con persistenza)",
       "Lezione 3: React e Tailwind (hooks, state, components, e-commerce catalog)",
       "Lezione 4: Next.js Full-Stack (SSR/SSG/ISR, routing, data fetching, blog)",

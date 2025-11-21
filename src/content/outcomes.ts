@@ -15,7 +15,7 @@ export const outcomesContent = {
     },
     {
       type: "briefcase",
-      text: "AI Mastery: padronanza completa di Cursor AI, GitHub Copilot e prompt engineering avanzato"
+      text: "AI Mastery: padronanza completa di VS Code + GitHub Copilot, Cursor AI e prompt engineering avanzato"
     }
   ]
 };

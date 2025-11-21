@@ -2,7 +2,7 @@ export const cardsContent = [
   {
     id: 1,
     title: "AI come Pair Programmer",
-    description: "Cursor AI e GitHub Copilot scrivono il codice boilerplate mentre tu impari architettura e logica. Sviluppi 10x più veloce senza sacrificare la comprensione. Prompt engineering dal vivo in ogni lezione."
+    description: "VS Code con GitHub Copilot e Cursor AI scrivono il codice boilerplate mentre tu impari architettura e logica. Sviluppi 10x più veloce senza sacrificare la comprensione. Prompt engineering dal vivo in ogni lezione."
   },
   {
     id: 2,
