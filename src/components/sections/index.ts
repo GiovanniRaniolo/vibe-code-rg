@@ -6,7 +6,6 @@ export { SectionDivider } from './SectionDivider';
 export { TransformationSection } from './TransformationSection';
 export { LearningSection } from './LearningSection';
 export { OutcomesSection } from './OutcomesSection';
-export { StackAndSkillsSection } from './StackAndSkillsSection';
 export { BenefitsSection } from './BenefitsSection';
 export { PricingSection } from './PricingSection';
 export { LocationSection } from './LocationSection';

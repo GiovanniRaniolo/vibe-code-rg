@@ -98,6 +98,42 @@ export const TransformationSection = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Outcomes Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-20 max-w-5xl mx-auto"
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">
+            {transformationContent.outcomes.title}
+          </h3>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {transformationContent.outcomes.items.map((outcome, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className="text-center p-8 rounded-xl border-2 bg-primary/5 border-primary/40 hover:border-primary/60 transition-all"
+              >
+                <div className="text-6xl font-bold text-primary mb-3">
+                  {outcome.number}
+                </div>
+                <div className="text-xl font-semibold mb-2">
+                  {outcome.label}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {outcome.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

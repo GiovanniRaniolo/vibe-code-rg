@@ -32,5 +32,26 @@ export const transformationContent = {
       deliverable: "Full-stack app custom portfolio-ready",
       technologies: ["Full Stack", "Vercel", "Digital Ocean"]
     }
-  ]
+  ],
+  
+  outcomes: {
+    title: "Risultati Concreti",
+    items: [
+      {
+        number: "7",
+        label: "Progetti Live",
+        description: "Da landing page a full-stack app, tutto deployato e funzionante"
+      },
+      {
+        number: "1",
+        label: "MVP Custom",
+        description: "La tua idea trasformata in app portfolio-ready con code review"
+      },
+      {
+        number: "100%",
+        label: "Autonomia",
+        description: "Capacità di sviluppare qualsiasi progetto con AI come assistente"
+      }
+    ]
+  }
 };
