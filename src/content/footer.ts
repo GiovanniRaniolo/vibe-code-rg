@@ -70,9 +70,9 @@ export const footerContent = {
     {
       title: "Legale",
       links: [
-        { label: "Privacy Policy", url: "#" },
+        { label: "Privacy Policy", url: "/privacy-policy" },
+        { label: "Cookie Policy", url: "/cookie-policy" },
         { label: "Termini di Servizio", url: "#" },
-        { label: "Cookie Policy", url: "#" },
         { label: "Rimborsi", url: "#" }
       ]
     }

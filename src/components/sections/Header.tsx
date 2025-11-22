@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -9,7 +10,9 @@ export const Header = () => {
       className="border-b border-border py-4"
     >
       <div className="container mx-auto px-4">
-        <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8" />
+        <Link to="/">
+          <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 cursor-pointer hover:opacity-80 transition-opacity" />
+        </Link>
       </div>
     </motion.header>
   );
