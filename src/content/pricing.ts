@@ -23,31 +23,31 @@ export const pricingContent = {
   
   features: {
     type: "FORMAZIONE INTENSIVA",
-    price: "€997",
+    price: "€400",
     originalPrice: null, // Rimuovi barrato per più credibilità
     duration: "7 LEZIONI × 3 ORE",
     priceNote: "Early Bird fino al 15 Dicembre"
   },
   
   pricing: {
-    mainPrice: "€997",
+    mainPrice: "€400",
     priceLabel: "Prezzo Early Bird",
-    standardPrice: "€1.297",
+    standardPrice: "€500",
     standardPriceLabel: "(Prezzo standard dopo il 15 Dicembre)",
     
     paymentOptions: [
       {
         id: "one-time",
         label: "Pagamento Unico",
-        price: "€997",
-        savings: "Risparmi €300",
+        price: "€400",
+        savings: "Risparmi €100",
         recommended: true
       },
       {
         id: "installments",
         label: "3 Rate Mensili",
-        price: "€349/mese",
-        total: "€1.047 totali",
+        price: "€167/mese",
+        total: "€500 totali",
         recommended: false
       }
     ]

@@ -1,7 +1,7 @@
 export const footerContent = {
   heading: {
-    title: "Inizia il Tuo Percorso",
-    subtitle: "Dopo il corso avrai le competenze per sviluppare applicazioni web moderne e continuare ad apprendere autonomamente con l'assistenza dell'AI. Il tuo MVP sarà il primo di molti progetti."
+    title: "Da Zero a Developer in 7 Settimane",
+    subtitle: "Formazione intensiva AI-first. Portfolio reale. Autonomia completa."
   },
   social: [
     {
