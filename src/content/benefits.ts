@@ -2,7 +2,7 @@ export const benefitsContent = {
   title: "Programma delle 7 Lezioni",
   subtitle: "Ogni settimana costruisci un progetto reale che entra nel tuo portfolio.\nDall'HTML alla tua app full-stack in produzione.",
   curriculum: {
-    intro: "Dal setup AI al tuo MVP deployato in 7 settimane:",
+    intro: "Dal setup AI al tuo MVP online in 7 settimane:",
     items: [
       "Lezione 1: Fondamenti e Setup AI (HTML/CSS responsive, VS Code + Copilot e Cursor, primo deploy)",
       "Lezione 2: JavaScript ES6+ e Git (async/await, DOM, todo app con persistenza)",
