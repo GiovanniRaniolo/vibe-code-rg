@@ -43,7 +43,7 @@ export const benefitsContent = {
     ]
   },
   notionButton: {
-    text: "Scarica Programma Completo (PDF)",
+    text: "Programma Completo",
     url: "https://www.notion.so/GL-TCH-Programma-28fabf63ca0c80aca9d0e6754512dde2"
   },
   exerciseLabel: "Esercitazione"
