@@ -11,7 +11,7 @@ const fadeInUp = {
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.25
     }
   }
 };
@@ -40,20 +40,17 @@ export const TransformationSection = () => {
         </motion.div>
 
         {/* Timeline */}
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.1 }}
-          className="relative"
-        >
+        <div className="relative">
           {/* Vertical line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block" />
 
           {transformationContent.timeline.map((phase, idx) => (
             <motion.div
               key={idx}
-              variants={fadeInUp}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: idx * 0.15 }}
               className="relative mb-12 last:mb-0"
             >
               <div className="flex flex-col md:flex-row gap-6 md:gap-8">
@@ -97,7 +94,7 @@ export const TransformationSection = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Outcomes Section */}
         <motion.div
