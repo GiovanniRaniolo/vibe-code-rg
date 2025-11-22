@@ -43,35 +43,41 @@ export const Footer = () => {
           className="max-w-5xl mx-auto"
         >
           <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 mb-6" />
-          <h3 className="text-3xl font-bold mb-4">{footerContent.heading.title}</h3>
-          <p className="text-muted-foreground mb-12">{footerContent.heading.subtitle}</p>
           
-          {/* Social Links */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center gap-4 mb-12"
-          >
-            {footerContent.social.map((social, idx) => {
-              const IconComponent = iconMap[social.icon as keyof typeof iconMap];
-              return (
-                <motion.a
-                  key={idx}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                >
-                  <IconComponent className="w-5 h-5" />
-                </motion.a>
-              );
-            })}
-          </motion.div>
+          {/* Heading + Social in same row on desktop */}
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
+            <div className="flex-1">
+              <h3 className="text-3xl font-bold mb-4">{footerContent.heading.title}</h3>
+              <p className="text-muted-foreground">{footerContent.heading.subtitle}</p>
+            </div>
+            
+            {/* Social Links */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex gap-4 md:mt-0"
+            >
+              {footerContent.social.map((social, idx) => {
+                const IconComponent = iconMap[social.icon as keyof typeof iconMap];
+                return (
+                  <motion.a
+                    key={idx}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    whileHover={{ scale: 1.1, y: -3 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </motion.a>
+                );
+              })}
+            </motion.div>
+          </div>
 
           {/* Footer Links Grid */}
           <motion.div
