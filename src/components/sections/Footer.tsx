@@ -40,7 +40,7 @@ export const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 mb-6" />
           <h3 className="text-3xl font-bold mb-4">{footerContent.heading.title}</h3>
@@ -74,12 +74,12 @@ export const Footer = () => {
           </motion.div>
 
           {/* Footer Links Grid */}
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-sm mb-12 pb-12 border-b border-border max-w-4xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-sm mb-12 pb-12 border-b border-border max-w-5xl mx-auto"
           >
             {footerContent.navigation.map((section, idx) => (
               <motion.div key={idx} variants={fadeInUp}>
