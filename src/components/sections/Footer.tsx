@@ -42,7 +42,9 @@ export const Footer = () => {
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 mb-6" />
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 mb-6 cursor-pointer hover:opacity-80 transition-opacity" />
+          </Link>
           
           {/* Heading + Social in same row on desktop */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
