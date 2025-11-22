@@ -30,7 +30,7 @@ export const benefitsContent = {
       },
       {
         icon: "target",
-        text: "Code review dettagliata del tuo MVP finale da parte del docente"
+        text: "Code review dettagliata del tuo MVP finale da parte dei docenti"
       },
       {
         icon: "globe",

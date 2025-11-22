@@ -1,6 +1,6 @@
 export const pricingContent = {
-  title: "Investimento nel Tuo Futuro",
-  subtitle: "21 ore che ti danno autonomia completa come developer. Il ROI più alto che trovi.",
+  title: "Investi nel Tuo Futuro",
+  subtitle: "21 ore che ti danno autonomia completa come developer.",
   
   urgency: {
     badge: "EARLY BIRD ATTIVO",

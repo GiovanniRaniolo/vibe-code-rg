@@ -26,12 +26,12 @@ export const faqContent = {
     {
       id: "item-5",
       question: "Cosa succede se non completo il MVP in tempo?",
-      answer: "Supporto esteso fino al deploy finale. Community Discord resta attiva lifetime, il docente fa code review anche post-corso fino al completamento. Non c'è deadline dura: l'importante è finire bene, non veloce."
+      answer: "Supporto esteso fino al deploy finale. Community Discord resta attiva lifetime, i docenti fanno code review anche post-corso fino al completamento. Non c'è deadline dura: l'importante è finire bene, non veloce."
     },
     {
       id: "item-6",
       question: "C'è supporto dopo il corso?",
-      answer: "Community Discord lifetime: Q&A, project reviews, networking con alumni. Aggiornamenti sui nuovi AI tools e best practices. Il docente resta disponibile per consulenze spot. Non ti lasciamo solo dopo week 7."
+      answer: "Community Discord lifetime: Q&A, project reviews, networking con alumni. Aggiornamenti sui nuovi AI tools e best practices. I docenti restano disponibili per consulenze spot. Non ti lasciamo solo dopo week 7."
     },
     {
       id: "item-7",
@@ -41,7 +41,7 @@ export const faqContent = {
     {
       id: "item-8",
       question: "Il mio MVP sarà veramente pronto per il portfolio?",
-      answer: "Sì. Deployato in produzione (Vercel/Digital Ocean), repository GitHub documentato, code review finale dal docente. È il tuo progetto al 100%, ottimizzato per essere mostrato in colloqui o a clienti."
+      answer: "Sì. Deployato in produzione (Vercel/Digital Ocean), repository GitHub documentato, code review finale dai docenti. È il tuo progetto al 100%, ottimizzato per essere mostrato in colloqui o a clienti."
     }
   ],
   
