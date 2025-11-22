@@ -117,9 +117,6 @@ export const Footer = () => {
                           ) : (
                             <>
                               {link.label}
-                              {link.url.startsWith('http') && !link.icon && (
-                                <Globe className="w-3 h-3 opacity-50 mt-0.5" />
-                              )}
                             </>
                           )}
                         </a>

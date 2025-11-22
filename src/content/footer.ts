@@ -34,7 +34,7 @@ export const footerContent = {
     {
       title: "Risorse",
       links: [
-        { label: "Documentazione", url: "#" },
+        { label: "Documentazione", url: "https://www.notion.so/GL-TCH-Programma-28fabf63ca0c80aca9d0e6754512dde2" },
         { label: "Community Discord", url: "#" }
       ]
     },
