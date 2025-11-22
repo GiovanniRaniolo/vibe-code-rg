@@ -3,10 +3,27 @@ import { motion } from "framer-motion";
 import { faqContent } from "@/content/faq";
 import { Shield, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export const FAQSection = () => {
+  const location = useLocation();
+  const [openItem, setOpenItem] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    if (location.hash === "#prerequisiti") {
+      setOpenItem("item-1");
+      setTimeout(() => {
+        const element = document.getElementById("faq-section");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
-    <section className="container mx-auto px-4 py-20">
+    <section id="faq-section" className="container mx-auto px-4 py-20">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -33,7 +50,7 @@ export const FAQSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible value={openItem} onValueChange={setOpenItem}>
               {faqContent.essentialQuestions.map((item) => (
                 <AccordionItem key={item.id} value={item.id}>
                   <AccordionTrigger className="text-left font-semibold">

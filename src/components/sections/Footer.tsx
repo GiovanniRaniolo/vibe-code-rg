@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Twitter, Linkedin, Github, Youtube, Instagram, Mail, Shield, Globe } from "lucide-react";
+import { Twitter, Linkedin, Github, Youtube, Instagram, Mail, Shield, Globe, MapPin } from "lucide-react";
 import { footerContent } from "@/content/footer";
+import { Link } from "react-router-dom";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -78,7 +79,7 @@ export const Footer = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid md:grid-cols-5 gap-8 text-sm mb-12 pb-12 border-b border-border"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-sm mb-12 pb-12 border-b border-border max-w-4xl mx-auto"
           >
             {footerContent.navigation.map((section, idx) => (
               <motion.div key={idx} variants={fadeInUp}>
@@ -89,17 +90,40 @@ export const Footer = () => {
                       key={linkIdx}
                       whileHover={{ x: 3, transition: { duration: 0.2 } }}
                     >
-                      <a 
-                        href={link.url} 
-                        target={link.url.startsWith('http') ? "_blank" : undefined}
-                        rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                        className="hover:text-primary transition-colors inline-flex items-center gap-1"
-                      >
-                        {link.label}
-                        {link.url.startsWith('http') && (
-                          <Globe className="w-3 h-3 opacity-50" />
-                        )}
-                      </a>
+                      {link.url.startsWith('/') ? (
+                        <Link 
+                          to={link.url}
+                          className="hover:text-primary transition-colors inline-flex items-start gap-1.5"
+                        >
+                          {link.icon === 'mapPin' && <MapPin className="w-3.5 h-3.5 mt-0.5" />}
+                          <div className="flex flex-col gap-1">
+                            <span>{link.label}</span>
+                            {link.sublabel && <span className="text-xs">{link.sublabel}</span>}
+                          </div>
+                        </Link>
+                      ) : (
+                        <a 
+                          href={link.url} 
+                          target={link.url.startsWith('http') ? "_blank" : undefined}
+                          rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+                          className="hover:text-primary transition-colors inline-flex items-start gap-1.5"
+                        >
+                          {link.icon === 'mapPin' && <MapPin className="w-3.5 h-3.5 mt-0.5" />}
+                          {link.sublabel ? (
+                            <div className="flex flex-col gap-2">
+                              <span>{link.label}</span>
+                              <span>{link.sublabel}</span>
+                            </div>
+                          ) : (
+                            <>
+                              {link.label}
+                              {link.url.startsWith('http') && !link.icon && (
+                                <Globe className="w-3 h-3 opacity-50 mt-0.5" />
+                              )}
+                            </>
+                          )}
+                        </a>
+                      )}
                     </motion.li>
                   ))}
                 </ul>
