@@ -8,17 +8,20 @@ import { useLocation } from "react-router-dom";
 
 export const FAQSection = () => {
   const location = useLocation();
-  const [openItem, setOpenItem] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     if (location.hash === "#prerequisiti") {
-      setOpenItem("item-1");
       setTimeout(() => {
         const element = document.getElementById("faq-section");
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-      }, 100);
+        // Trigger click on first accordion item
+        const firstTrigger = document.querySelector('#faq-item-1 button') as HTMLButtonElement;
+        if (firstTrigger) {
+          firstTrigger.click();
+        }
+      }, 300);
     }
   }, [location]);
 
@@ -50,9 +53,9 @@ export const FAQSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <Accordion type="single" collapsible value={openItem} onValueChange={setOpenItem}>
-              {faqContent.essentialQuestions.map((item) => (
-                <AccordionItem key={item.id} value={item.id}>
+            <Accordion type="single" collapsible>
+              {faqContent.essentialQuestions.map((item, index) => (
+                <AccordionItem key={item.id} value={item.id} id={index === 0 ? 'faq-item-1' : undefined}>
                   <AccordionTrigger className="text-left font-semibold">
                     {item.question}
                   </AccordionTrigger>
