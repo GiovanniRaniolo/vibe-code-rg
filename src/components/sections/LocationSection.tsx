@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const LocationSection = () => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

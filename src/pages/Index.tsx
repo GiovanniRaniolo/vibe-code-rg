@@ -39,8 +39,12 @@ const Index = () => {
       {/* FAQ con Garanzia */}
       <FAQSection />
       
+      <SectionDivider />
+      
       {/* Pricing con Countdown e Urgency */}
       <PricingSection />
+      
+      <SectionDivider />
       
       {/* Location */}
       <LocationSection />
