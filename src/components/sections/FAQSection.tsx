@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { faqContent } from "@/content/faq";
-import { Shield, MessageCircle } from "lucide-react";
+import { Calendar, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -75,7 +75,7 @@ export const FAQSection = () => {
             {/* Guarantee Box */}
             <div className="bg-gradient-to-br from-primary/10 to-secondary border-2 border-primary/30 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-3">
-                <Shield className="w-6 h-6 text-primary" />
+                <Calendar className="w-6 h-6 text-primary" />
                 <span className="text-xs font-bold text-primary bg-primary/20 px-2 py-1 rounded-full">
                   {faqContent.guarantee.badge}
                 </span>

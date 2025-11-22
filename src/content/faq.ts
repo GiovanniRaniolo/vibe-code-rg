@@ -48,9 +48,9 @@ export const faqContent = {
   moreQuestions: [],
   
   guarantee: {
-    title: "Garanzia Soddisfatti o Rimborsati",
-    description: "Partecipa alle prime 2 lezioni. Se decidi che il corso non fa per te, rimborso completo entro fine Lezione 2. No questions asked, no hard feelings.",
-    badge: "100% RISK-FREE"
+    title: "Weekend Format",
+    description: "Ogni sabato dalle 15:00 alle 18:00, per 7 settimane. Progettato per chi lavora full-time durante la settimana. Esercitazioni da fare a casa nel tuo tempo libero, 2-4h quando preferisci.",
+    badge: "SABATO POMERIGGIO"
   },
   
   contact: {
