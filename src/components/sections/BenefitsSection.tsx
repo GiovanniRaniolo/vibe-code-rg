@@ -36,7 +36,7 @@ export const BenefitsSection = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4 max-w-5xl bg-secondary/30 border border-primary/20 rounded-2xl py-12">
+      <div className="container mx-auto px-4 max-w-5xl">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,22 +45,24 @@ export const BenefitsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h3 className="text-3xl font-bold mb-3">
+          <h3 className="text-3xl md:text-4xl font-bold mb-3">
             {benefitsContent.title}
           </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">
             {benefitsContent.subtitle}
           </p>
         </motion.div>
 
-        {/* Curriculum Accordion */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto mb-12"
-        >
+        {/* Content Card */}
+        <div className="bg-secondary/30 border border-primary/20 rounded-2xl py-12 px-4 md:px-8">
+          {/* Curriculum Accordion */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-4xl mx-auto mb-12"
+          >
           <p className="text-center text-muted-foreground mb-6">{benefitsContent.curriculum.intro}</p>
           <div className="space-y-3">
             {benefitsContent.curriculum.items.map((curriculumItem, idx) => {
@@ -177,6 +179,7 @@ export const BenefitsSection = () => {
             </svg>
           </a>
         </motion.div>
+        </div>
       </div>
     </section>
   );

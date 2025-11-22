@@ -34,7 +34,7 @@ export const TransformationSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             {transformationContent.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto whitespace-pre-line">
             {transformationContent.subtitle}
           </p>
         </motion.div>

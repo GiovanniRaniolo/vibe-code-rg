@@ -1,7 +1,7 @@
 export const transformationContent = {
   badge: "IL TUO PERCORSO",
   title: "Da Zero Coding a Developer in 7 Settimane",
-  subtitle: "Ogni fase costruisce competenze concrete. Alla fine hai un portfolio completo e autonomia totale.",
+  subtitle: "Ogni fase costruisce competenze concrete.\nAlla fine hai un portfolio completo e autonomia totale.",
   
   timeline: [
     {
