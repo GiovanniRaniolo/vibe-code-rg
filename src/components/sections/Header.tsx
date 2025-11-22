@@ -11,7 +11,10 @@ export const Header = () => {
     >
       <div className="container mx-auto px-4">
         <Link to="/">
-          <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 cursor-pointer hover:opacity-80 transition-opacity" />
+          <picture>
+            <source srcSet="/glitch_logo.webp" type="image/webp" />
+            <img src="/glitch_logo.png" alt="Glitch Academy" width="270" height="72" className="h-8 cursor-pointer hover:opacity-80 transition-opacity" />
+          </picture>
         </Link>
       </div>
     </motion.header>

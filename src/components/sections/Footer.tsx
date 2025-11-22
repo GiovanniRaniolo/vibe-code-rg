@@ -43,7 +43,10 @@ export const Footer = () => {
           className="max-w-5xl mx-auto"
         >
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/glitch_logo.png" alt="Glitch Academy" className="h-10 -ml-2 mb-6 cursor-pointer hover:opacity-80 transition-opacity" />
+          <picture>
+            <source srcSet="/glitch_logo.webp" type="image/webp" />
+            <img src="/glitch_logo.png" alt="Glitch Academy" width="270" height="72" className="h-10 -ml-2 mb-6 cursor-pointer hover:opacity-80 transition-opacity" />
+          </picture>
           </Link>
           
           {/* Heading + Social in same row on desktop */}
