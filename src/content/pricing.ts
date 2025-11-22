@@ -70,7 +70,7 @@ export const pricingContent = {
   guarantee: {
     icon: "shield",
     title: "Garanzia 100% Soddisfatti",
-    description: "Se dopo la Lezione 2 decidi che il corso non fa per te, rimborso completo. No questions asked.",
+    description: "Se dopo la Lezione 2 decidi che il corso non fa per te, ti rimborsiamo le 5 lezioni rimanenti. Senza domande.",
     badge: "RISK-FREE"
   },
   
