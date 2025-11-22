@@ -42,16 +42,11 @@ export const BrowserMockup = () => {
       >
         {/* Versione mobile - Immagine statica */}
         <div className="md:hidden overflow-x-hidden max-w-full">
-          <picture>
-            <source srcSet="/terminal-ascii.webp" type="image/webp" />
-            <img 
-              src="/terminal-ascii.png"
-              width="783"
-              height="379"
-              alt="GL!TCH Academy Terminal" 
-              className="w-full h-auto"
-            />
-          </picture>
+          <img 
+            src="/terminal-ascii.png"
+            alt="GL!TCH Academy Terminal" 
+            className="w-full h-auto"
+          />
           <div className="text-green-400 mt-2 flex items-center text-[10px]">
             <span>user@gl!tch:~$</span>
             <motion.span 
