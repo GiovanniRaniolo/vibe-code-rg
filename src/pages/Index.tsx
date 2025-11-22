@@ -6,7 +6,6 @@ import {
   SectionDivider,
   TransformationSection,
   BenefitsSection,
-  StackAndSkillsSection,
   FAQSection,
   PricingSection,
   LocationSection,
@@ -34,11 +33,6 @@ const Index = () => {
       
       {/* Programma Dettagliato con Accordion */}
       <BenefitsSection />
-      
-      <SectionDivider />
-      
-      {/* NEW: Stack Tecnologico e Competenze (merge Learning + Outcomes) */}
-      <StackAndSkillsSection />
       
       <SectionDivider />
       

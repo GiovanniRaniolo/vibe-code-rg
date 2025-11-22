@@ -7,7 +7,7 @@ export const transformationContent = {
     {
       week: "Settimana 1-2",
       title: "Fondamenti Solidi",
-      description: "Setup Cursor AI, HTML/CSS responsive, JavaScript ES6+, async/await, DOM manipulation, Git workflow base.",
+      description: "Setup VS Code + GitHub Copilot e Cursor AI, HTML/CSS responsive, JavaScript ES6+, async/await, DOM manipulation, Git workflow base.",
       deliverable: "Landing page responsive + Todo app con Local Storage",
       technologies: ["HTML5", "CSS3", "JavaScript", "Git"]
     },
@@ -32,5 +32,26 @@ export const transformationContent = {
       deliverable: "Full-stack app custom portfolio-ready",
       technologies: ["Full Stack", "Vercel", "Digital Ocean"]
     }
-  ]
+  ],
+  
+  outcomes: {
+    title: "Risultati Concreti",
+    items: [
+      {
+        number: "7",
+        label: "Progetti Live",
+        description: "Da landing page a full-stack app, tutto deployato e funzionante"
+      },
+      {
+        number: "1",
+        label: "MVP Custom",
+        description: "La tua idea trasformata in app portfolio-ready con code review"
+      },
+      {
+        number: "100%",
+        label: "Autonomia",
+        description: "Capacità di sviluppare qualsiasi progetto con AI come assistente"
+      }
+    ]
+  }
 };
