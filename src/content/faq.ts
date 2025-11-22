@@ -49,7 +49,7 @@ export const faqContent = {
   
   guarantee: {
     title: "Weekend Format",
-    description: "Ogni sabato dalle 15:00 alle 18:00, per 7 settimane. Progettato per chi lavora full-time durante la settimana. Esercitazioni da fare a casa nel tuo tempo libero, 2-4h quando preferisci.",
+    description: "Ogni sabato dalle 15:00 alle 18:00, per 7 settimane. Progettato per chi lavora durante la settimana. Esercitazioni da svolgere in autonomia in 2-4h nel tuo tempo libero.",
     badge: "SABATO POMERIGGIO"
   },
   
