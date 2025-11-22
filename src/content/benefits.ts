@@ -22,11 +22,11 @@ export const benefitsContent = {
       },
       {
         icon: "code",
-        text: "Repository GitHub completo: template, esempi, soluzioni pronte all'uso"
+        text: "Repository GitHub con template, esempi, soluzioni pronte all'uso"
       },
       {
         icon: "zap",
-        text: "Community Discord lifetime: Q&A asincrono, networking, aggiornamenti AI"
+        text: "Community Discord: Q&A asincrono e aggiornamenti"
       },
       {
         icon: "target",
@@ -34,11 +34,11 @@ export const benefitsContent = {
       },
       {
         icon: "globe",
-        text: "Certificato di completamento + accesso permanente alle registrazioni"
+        text: "Certificato di completamento + accesso alle registrazioni"
       },
       {
         icon: "bookOpen",
-        text: "Materiali didattici: slide, cheat sheet, prompt templates riutilizzabili"
+        text: "Materiali didattici: slide e prompt templates riutilizzabili"
       }
     ]
   },
