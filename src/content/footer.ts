@@ -40,7 +40,7 @@ export const footerContent = {
     {
       title: "Supporto",
       links: [
-        { label: "Contattaci", url: "#" },
+        { label: "Contattaci", url: "https://linktr.ee/glitchacademy" },
         { label: "Prerequisiti", url: "/#prerequisiti" }
       ]
     },
@@ -65,7 +65,6 @@ export const footerContent = {
   bottom: {
     copyright: "© 2025 Gl!tch Academy. Tutti i diritti riservati.",
     brandName: "Gl!tch Academy",
-    email: "info@glitch-academy.com",
-    securePayments: "Pagamenti sicuri"
+    email: "glitchacademycrew@gmail.com"
   }
 };

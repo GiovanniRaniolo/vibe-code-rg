@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link2, Instagram, Send, Mail, Shield, Globe, MapPin } from "lucide-react";
+import { Link2, Instagram, Send, Mail, Globe, MapPin } from "lucide-react";
 import { footerContent } from "@/content/footer";
 import { Link } from "react-router-dom";
 
@@ -146,7 +146,7 @@ export const Footer = () => {
               <span>{footerContent.bottom.copyright}</span>
             </div>
             <div className="flex items-center gap-6">
-              <motion.a 
+              <motion.a
                 href={`mailto:${footerContent.bottom.email}`}
                 className="hover:text-primary transition-colors inline-flex items-center gap-1.5"
                 whileHover={{ scale: 1.05 }}
@@ -154,11 +154,6 @@ export const Footer = () => {
                 <Mail className="w-4 h-4" />
                 <span>{footerContent.bottom.email}</span>
               </motion.a>
-              <span className="text-muted-foreground/50">|</span>
-              <div className="flex items-center gap-1">
-                <Shield className="w-4 h-4" />
-                <span>{footerContent.bottom.securePayments}</span>
-              </div>
             </div>
           </motion.div>
         </motion.div>
