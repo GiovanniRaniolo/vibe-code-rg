@@ -14,6 +14,6 @@ export const dayWorkflowContent = {
     "7 lezioni da 3 ore ciascuna (21 ore totali)",
     "Live coding con AI in tempo reale e prompt engineering",
     "Esercitazioni pratiche dopo ogni modulo",
-    "Sviluppo MVP finale personalizzato con supporto continuo su Discord"
+    "Sviluppo MVP finale personalizzato con supporto continuo su Telegram"
   ]
 };

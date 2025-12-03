@@ -26,7 +26,7 @@ export const benefitsContent = {
       },
       {
         icon: "zap",
-        text: "Community Discord: Q&A asincrono e aggiornamenti"
+        text: "Community Telegram: Q&A asincrono e aggiornamenti"
       },
       {
         icon: "target",

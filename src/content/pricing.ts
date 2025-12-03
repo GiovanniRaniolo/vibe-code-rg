@@ -58,7 +58,7 @@ export const pricingContent = {
     items: [
       "21 ore di formazione live in presenza",
       "Repository GitHub con template e soluzioni",
-      "Community Discord lifetime",
+      "Community Telegram lifetime",
       "Code review 1-to-1 del tuo MVP",
       "Certificato di completamento",
       "Registrazioni lifetime delle lezioni",

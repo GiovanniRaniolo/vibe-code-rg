@@ -5,29 +5,19 @@ export const footerContent = {
   },
   social: [
     {
-      icon: "twitter",
-      label: "Twitter",
-      url: "https://twitter.com/glitch"
-    },
-    {
-      icon: "linkedin",
-      label: "LinkedIn",
-      url: "https://linkedin.com/company/glitch"
-    },
-    {
-      icon: "github",
-      label: "GitHub",
-      url: "https://github.com/glitch"
-    },
-    {
-      icon: "youtube",
-      label: "YouTube",
-      url: "https://youtube.com/@glitch"
+      icon: "linktree",
+      label: "Linktree",
+      url: "https://linktr.ee/glitchacademy"
     },
     {
       icon: "instagram",
       label: "Instagram",
-      url: "https://instagram.com/glitch"
+      url: "https://www.instagram.com/glitchacademy_coding?utm_source=qr&igsh=aTVwanljdzVnZzJk"
+    },
+    {
+      icon: "telegram",
+      label: "Telegram",
+      url: "https://t.me/glitchacademy"
     }
   ],
   navigation: [
@@ -35,7 +25,7 @@ export const footerContent = {
       title: "Risorse",
       links: [
         { label: "Documentazione", url: "https://www.notion.so/GL-TCH-Programma-28fabf63ca0c80aca9d0e6754512dde2" },
-        { label: "Community Discord", url: "#" }
+        { label: "Community Telegram", url: "https://t.me/glitchacademy" }
       ]
     },
     // {

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Twitter, Linkedin, Github, Youtube, Instagram, Mail, Shield, Globe, MapPin } from "lucide-react";
+import { Link2, Instagram, Send, Mail, Shield, Globe, MapPin } from "lucide-react";
 import { footerContent } from "@/content/footer";
 import { Link } from "react-router-dom";
 
@@ -18,11 +18,9 @@ const staggerContainer = {
 };
 
 const iconMap = {
-  twitter: Twitter,
-  linkedin: Linkedin,
-  github: Github,
-  youtube: Youtube,
-  instagram: Instagram
+  linktree: Link2,
+  instagram: Instagram,
+  telegram: Send
 };
 
 export const Footer = () => {
