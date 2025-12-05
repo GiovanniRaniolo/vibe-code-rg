@@ -10,7 +10,7 @@ export const privacyContent = {
           type: "contact",
           name: "GL!TCH ACADEMY",
           vat: "[DA INSERIRE]",
-          email: "info@glitch-academy.com"
+          email: "glitchacademycrew@gmail.com"
         }
       ]
     },
@@ -84,8 +84,8 @@ export const privacyContent = {
         },
         {
           type: "text",
-          text: "Per esercitare i tuoi diritti, contattaci all'indirizzo: info@glitch-academy.com",
-          emailLink: "info@glitch-academy.com"
+          text: "Per esercitare i tuoi diritti, contattaci all'indirizzo: glitchacademycrew@gmail.com",
+          emailLink: "glitchacademycrew@gmail.com"
         }
       ]
     },
@@ -103,6 +103,6 @@ export const privacyContent = {
   cta: {
     title: "Hai domande?",
     text: "Per qualsiasi chiarimento sulla nostra Privacy Policy, contattaci a:",
-    email: "info@glitch-academy.com"
+    email: "glitchacademycrew@gmail.com"
   }
 };

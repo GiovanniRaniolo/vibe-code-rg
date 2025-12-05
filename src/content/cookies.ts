@@ -109,6 +109,6 @@ export const cookiesContent = {
   cta: {
     title: "Hai domande?",
     text: "Per qualsiasi chiarimento sulla nostra Cookie Policy, contattaci a:",
-    email: "info@glitch-academy.com"
+    email: "glitchacademycrew@gmail.com"
   }
 };
