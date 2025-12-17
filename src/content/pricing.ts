@@ -2,12 +2,19 @@ export const pricingContent = {
   title: "Investi nel Tuo Futuro",
   subtitle: "21 ore che ti danno autonomia completa come developer.",
   
+  // Luma Event Configuration
+  luma: {
+    eventId: "evt-kXz94QZmFdkKk3b",
+    eventUrl: "https://lu.ma/event/evt-kXz94QZmFdkKk3b",
+    useEmbed: true // true = embed button, false = direct link
+  },
+  
   urgency: {
     badge: "EARLY BIRD ATTIVO",
     countdown: {
       enabled: true,
       text: "Sconto valido fino al",
-      deadline: "2025-12-15T23:59:59", // 15 Dicembre 2025
+      deadline: "2026-01-15T23:59:59", // 15 Gennaio 2026
       expiredText: "Offerta scaduta - prezzo standard applicato"
     },
     availability: {
@@ -15,7 +22,10 @@ export const pricingContent = {
       booked: 7,
       label: "posti rimasti",
       urgencyThreshold: 5, // Mostra urgency quando rimangono <= 5 posti
-      soldOutText: "SOLD OUT - Lista d'attesa disponibile"
+      soldOutText: "SOLD OUT - Lista d'attesa disponibile",
+      progressTitle: "Disponibilità Posti",
+      bookedText: "su",
+      bookedSuffix: "posti già prenotati"
     }
   },
   
@@ -26,14 +36,15 @@ export const pricingContent = {
     price: "€400",
     originalPrice: null, // Rimuovi barrato per più credibilità
     duration: "7 LEZIONI × 3 ORE",
-    priceNote: "Early Bird fino al 15 Dicembre"
+    priceNote: "Early Bird fino al 15 Gennaio"
   },
   
   pricing: {
     mainPrice: "€400",
     priceLabel: "Prezzo Early Bird",
     standardPrice: "€500",
-    standardPriceLabel: "(Prezzo standard dopo il 15 Dicembre)",
+    standardPriceLabel: "(Prezzo standard dopo il 15 Gennaio)",
+    recommendedLabel: "CONSIGLIATO",
     
     paymentOptions: [
       {
@@ -51,6 +62,13 @@ export const pricingContent = {
         recommended: false
       }
     ]
+  },
+  
+  countdownLabels: {
+    days: "Giorni",
+    hours: "Ore",
+    minutes: "Min",
+    seconds: "Sec"
   },
   
   included: {

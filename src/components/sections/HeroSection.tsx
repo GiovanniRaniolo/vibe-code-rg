@@ -1,9 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { heroContent } from "@/content/hero";
+import { pricingContent } from "@/content/pricing";
 import { MapPin, Zap, Calendar } from "lucide-react";
+import { useEffect } from "react";
+
+// Load Luma checkout script
+const loadLumaScript = () => {
+  if (!document.getElementById('luma-checkout')) {
+    const script = document.createElement('script');
+    script.id = 'luma-checkout';
+    script.src = 'https://embed.lu.ma/checkout-button.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }
+};
 
 export const HeroSection = () => {
+  // Load Luma script on mount if using embed
+  useEffect(() => {
+    if (pricingContent.luma?.useEmbed) {
+      loadLumaScript();
+    }
+  }, []);
   return (
     <section className="container mx-auto px-4 py-16 pb-16 text-center">
       {/* Super-sized Main Title */}
@@ -85,9 +104,30 @@ export const HeroSection = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">
-          {heroContent.cta}
-        </Button>
+        {pricingContent.luma?.useEmbed ? (
+          <a
+            href={pricingContent.luma.eventUrl}
+            className="luma-checkout--button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 text-white px-8 py-6"
+            data-luma-action="checkout"
+            data-luma-event-id={pricingContent.luma.eventId}
+          >
+            {heroContent.cta}
+          </a>
+        ) : (
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg"
+            asChild
+          >
+            <a 
+              href={pricingContent.luma?.eventUrl || "#"} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              {heroContent.cta}
+            </a>
+          </Button>
+        )}
       </motion.div>
     </section>
   );

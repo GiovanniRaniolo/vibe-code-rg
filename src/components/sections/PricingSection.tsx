@@ -5,6 +5,17 @@ import { pricingContent } from "@/content/pricing";
 import { Users, Clock, Shield, Check } from "lucide-react";
 import { useState, useEffect } from "react";
 
+// Load Luma checkout script
+const loadLumaScript = () => {
+  if (!document.getElementById('luma-checkout')) {
+    const script = document.createElement('script');
+    script.id = 'luma-checkout';
+    script.src = 'https://embed.lu.ma/checkout-button.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }
+};
+
 const CountdownTimer = ({ deadline }: { deadline: string }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -48,10 +59,10 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
   return (
     <div className="flex justify-center gap-2 sm:gap-3">
       {[
-        { value: timeLeft.days, label: "Giorni" },
-        { value: timeLeft.hours, label: "Ore" },
-        { value: timeLeft.minutes, label: "Min" },
-        { value: timeLeft.seconds, label: "Sec" }
+        { value: timeLeft.days, label: pricingContent.countdownLabels?.days || "Giorni" },
+        { value: timeLeft.hours, label: pricingContent.countdownLabels?.hours || "Ore" },
+        { value: timeLeft.minutes, label: pricingContent.countdownLabels?.minutes || "Min" },
+        { value: timeLeft.seconds, label: pricingContent.countdownLabels?.seconds || "Sec" }
       ].map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
           <div className="bg-primary/20 border border-primary/40 rounded-lg min-w-[52px] sm:min-w-[60px] h-[52px] sm:h-[60px] flex items-center justify-center">
@@ -69,6 +80,13 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
 export const PricingSection = () => {
   const availableSpots = (pricingContent.urgency?.availability.total || 12) - (pricingContent.urgency?.availability.booked || 0);
   const progressPercentage = ((pricingContent.urgency?.availability.booked || 0) / (pricingContent.urgency?.availability.total || 12)) * 100;
+
+  // Load Luma script on mount if using embed
+  useEffect(() => {
+    if (pricingContent.luma?.useEmbed) {
+      loadLumaScript();
+    }
+  }, []);
 
   return (
     <section className="container mx-auto px-4 py-20 overflow-x-hidden">
@@ -160,7 +178,7 @@ export const PricingSection = () => {
                       <span className="font-semibold">{option.label}</span>
                       {option.recommended && (
                         <span className="text-xs font-bold text-primary bg-primary/20 px-2 py-1 rounded-full">
-                          CONSIGLIATO
+                          {pricingContent.pricing.recommendedLabel || "CONSIGLIATO"}
                         </span>
                       )}
                     </div>
@@ -177,10 +195,31 @@ export const PricingSection = () => {
                 ))}
               </div>
 
-              {/* CTA Button */}
-              <Button size="lg" className="w-full mb-4 text-lg h-14">
-                {pricingContent.cta.primary}
-              </Button>
+              {/* CTA Button - Luma Integration */}
+              {pricingContent.luma?.useEmbed ? (
+                <a
+                  href={pricingContent.luma.eventUrl}
+                  className="luma-checkout--button w-full mb-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-4 py-2"
+                  data-luma-action="checkout"
+                  data-luma-event-id={pricingContent.luma.eventId}
+                >
+                  {pricingContent.cta.primary}
+                </a>
+              ) : (
+                <Button 
+                  size="lg" 
+                  className="w-full mb-4 text-lg h-14"
+                  asChild
+                >
+                  <a 
+                    href={pricingContent.luma?.eventUrl || "#"} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    {pricingContent.cta.primary}
+                  </a>
+                </Button>
+              )}
 
               <a
                 href={`https://wa.me/${pricingContent.cta.whatsapp?.replace(/\s/g, '')}`}
@@ -202,7 +241,9 @@ export const PricingSection = () => {
                 className="mt-6 bg-card border border-primary/20 rounded-xl p-6"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-semibold">Disponibilità Posti</span>
+                  <span className="text-sm font-semibold">
+                    {pricingContent.urgency.availability.progressTitle || "Disponibilità Posti"}
+                  </span>
                   <span className="text-sm text-primary font-bold">
                     {availableSpots} {pricingContent.urgency.availability.label}
                   </span>
@@ -214,7 +255,7 @@ export const PricingSection = () => {
                   />
                 </div>
                 <p className="text-xs text-muted-foreground mt-2 text-center">
-                  {pricingContent.urgency.availability.booked} su {pricingContent.urgency.availability.total} posti già prenotati
+                  {pricingContent.urgency.availability.booked} {pricingContent.urgency.availability.bookedText || "su"} {pricingContent.urgency.availability.total} {pricingContent.urgency.availability.bookedSuffix || "posti già prenotati"}
                 </p>
               </motion.div>
             )}
