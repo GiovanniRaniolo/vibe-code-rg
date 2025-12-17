@@ -94,8 +94,8 @@ export const pricingContent = {
   
   cta: {
     primary: "Prenota il Posto #8/12",
-    secondary: "Oppure scrivici su WhatsApp",
-    whatsapp: "+39 320 180 6418"
+    secondary: "Oppure scrivici su Telegram",
+    telegram: "https://t.me/glitchacademy"
   },
   
   priceDetails: "21 ORE IN AULA • MATERIALI LIFETIME • CERTIFICATO • COMMUNITY PRIVATA"

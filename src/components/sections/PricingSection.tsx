@@ -222,7 +222,7 @@ export const PricingSection = () => {
               )}
 
               <a
-                href={`https://wa.me/${pricingContent.cta.whatsapp?.replace(/\s/g, '')}`}
+                href={pricingContent.cta.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center text-sm text-muted-foreground hover:text-primary transition-colors"
