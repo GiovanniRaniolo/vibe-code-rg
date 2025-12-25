@@ -1,19 +1,27 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
   return (
-    <motion.header 
+    <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="border-b border-border py-4"
     >
       <div className="container mx-auto px-4">
-        <Link to="/">
-          <img src="/glitch_logo.png" alt="Glitch Academy" className="h-8 cursor-pointer hover:opacity-80 transition-opacity" />
-        </Link>
+        <a
+          href="https://glitchsociety.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/glitch_logo.png"
+            alt="Glitch Academy"
+            className="h-8 cursor-pointer hover:opacity-80 transition-opacity"
+          />
+        </a>
       </div>
     </motion.header>
-  );
-};
+  )
+}

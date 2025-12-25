@@ -1,31 +1,31 @@
-import { motion } from "framer-motion";
-import { Link2, Instagram, Send, Mail, Globe, MapPin } from "lucide-react";
-import { footerContent } from "@/content/footer";
-import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
+import { Link2, Instagram, Send, Mail, Globe, MapPin } from 'lucide-react'
+import { footerContent } from '@/content/footer'
+import { Link } from 'react-router-dom'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-};
+  transition: { duration: 0.5 },
+}
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
+      staggerChildren: 0.1,
+    },
+  },
+}
 
 const iconMap = {
   linktree: Link2,
   instagram: Instagram,
-  telegram: Send
-};
+  telegram: Send,
+}
 
 export const Footer = () => {
   return (
-    <motion.footer 
+    <motion.footer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -33,26 +33,38 @@ export const Footer = () => {
       className="border-t border-border py-16"
     >
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src="/glitch_logo.png" alt="Glitch Academy" className="h-10 -ml-2 mb-6 cursor-pointer hover:opacity-80 transition-opacity" />
-          </Link>
-          
+          <a
+            href="https://glitchsociety.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/glitch_logo.png"
+              alt="Glitch Academy"
+              className="h-10 -ml-2 mb-6 cursor-pointer hover:opacity-80 transition-opacity"
+            />
+          </a>
+
           {/* Heading + Social in same row on desktop */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
             <div className="flex-1">
-              <h3 className="text-3xl font-bold mb-4">{footerContent.heading.title}</h3>
-              <p className="text-muted-foreground">{footerContent.heading.subtitle}</p>
+              <h3 className="text-3xl font-bold mb-4">
+                {footerContent.heading.title}
+              </h3>
+              <p className="text-muted-foreground">
+                {footerContent.heading.subtitle}
+              </p>
             </div>
-            
+
             {/* Social Links */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -60,7 +72,8 @@ export const Footer = () => {
               className="flex gap-4 md:mt-0"
             >
               {footerContent.social.map((social, idx) => {
-                const IconComponent = iconMap[social.icon as keyof typeof iconMap];
+                const IconComponent =
+                  iconMap[social.icon as keyof typeof iconMap]
                 return (
                   <motion.a
                     key={idx}
@@ -74,7 +87,7 @@ export const Footer = () => {
                   >
                     <IconComponent className="w-5 h-5" />
                   </motion.a>
-                );
+                )
               })}
             </motion.div>
           </div>
@@ -89,41 +102,53 @@ export const Footer = () => {
           >
             {footerContent.navigation.map((section, idx) => (
               <motion.div key={idx} variants={fadeInUp}>
-                <h4 className="font-semibold mb-4 text-foreground">{section.title}</h4>
+                <h4 className="font-semibold mb-4 text-foreground">
+                  {section.title}
+                </h4>
                 <ul className="space-y-2.5 text-muted-foreground">
                   {section.links.map((link, linkIdx) => (
-                    <motion.li 
+                    <motion.li
                       key={linkIdx}
                       whileHover={{ x: 3, transition: { duration: 0.2 } }}
                     >
                       {link.url.startsWith('/') ? (
-                        <Link 
+                        <Link
                           to={link.url}
                           className="hover:text-primary transition-colors inline-flex items-start gap-1.5"
                         >
-                          {link.icon === 'mapPin' && <MapPin className="w-3.5 h-3.5 mt-0.5" />}
+                          {link.icon === 'mapPin' && (
+                            <MapPin className="w-3.5 h-3.5 mt-0.5" />
+                          )}
                           <div className="flex flex-col gap-1">
                             <span>{link.label}</span>
-                            {link.sublabel && <span className="text-xs">{link.sublabel}</span>}
+                            {link.sublabel && (
+                              <span className="text-xs">{link.sublabel}</span>
+                            )}
                           </div>
                         </Link>
                       ) : (
-                        <a 
-                          href={link.url} 
-                          target={link.url.startsWith('http') ? "_blank" : undefined}
-                          rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+                        <a
+                          href={link.url}
+                          target={
+                            link.url.startsWith('http') ? '_blank' : undefined
+                          }
+                          rel={
+                            link.url.startsWith('http')
+                              ? 'noopener noreferrer'
+                              : undefined
+                          }
                           className="hover:text-primary transition-colors inline-flex items-start gap-1.5"
                         >
-                          {link.icon === 'mapPin' && <MapPin className="w-3.5 h-3.5 mt-0.5" />}
+                          {link.icon === 'mapPin' && (
+                            <MapPin className="w-3.5 h-3.5 mt-0.5" />
+                          )}
                           {link.sublabel ? (
                             <div className="flex flex-col gap-2">
                               <span>{link.label}</span>
                               <span>{link.sublabel}</span>
                             </div>
                           ) : (
-                            <>
-                              {link.label}
-                            </>
+                            <>{link.label}</>
                           )}
                         </a>
                       )}
@@ -135,7 +160,7 @@ export const Footer = () => {
           </motion.div>
 
           {/* Bottom Footer */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -159,5 +184,5 @@ export const Footer = () => {
         </motion.div>
       </div>
     </motion.footer>
-  );
-};
+  )
+}
