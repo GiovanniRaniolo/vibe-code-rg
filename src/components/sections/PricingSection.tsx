@@ -1,20 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { pricingContent } from "@/content/pricing";
-import { Users, Clock, Shield, Check } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { motion } from 'framer-motion'
+import { pricingContent } from '@/content/pricing'
+import { Users, Clock, Shield, Check } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 // Load Luma checkout script
 const loadLumaScript = () => {
   if (!document.getElementById('luma-checkout')) {
-    const script = document.createElement('script');
-    script.id = 'luma-checkout';
-    script.src = 'https://embed.lu.ma/checkout-button.js';
-    script.async = true;
-    document.body.appendChild(script);
+    const script = document.createElement('script')
+    script.id = 'luma-checkout'
+    script.src = 'https://embed.lu.ma/checkout-button.js'
+    script.async = true
+    document.body.appendChild(script)
   }
-};
+}
 
 const CountdownTimer = ({ deadline }: { deadline: string }) => {
   const [timeLeft, setTimeLeft] = useState({
@@ -22,47 +22,65 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
     hours: 0,
     minutes: 0,
     seconds: 0,
-    expired: false
-  });
+    expired: false,
+  })
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = +new Date(deadline) - +new Date();
-      
+      const difference = +new Date(deadline) - +new Date()
+
       if (difference > 0) {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
-          expired: false
-        });
+          expired: false,
+        })
       } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0, expired: true });
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+          expired: true,
+        })
       }
-    };
+    }
 
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+    calculateTimeLeft()
+    const timer = setInterval(calculateTimeLeft, 1000)
 
-    return () => clearInterval(timer);
-  }, [deadline]);
+    return () => clearInterval(timer)
+  }, [deadline])
 
   if (timeLeft.expired) {
     return (
       <div className="text-sm text-muted-foreground">
         {pricingContent.urgency?.countdown.expiredText}
       </div>
-    );
+    )
   }
 
   return (
     <div className="flex justify-center gap-2 sm:gap-3">
       {[
-        { value: timeLeft.days, label: pricingContent.countdownLabels?.days || "Giorni" },
-        { value: timeLeft.hours, label: pricingContent.countdownLabels?.hours || "Ore" },
-        { value: timeLeft.minutes, label: pricingContent.countdownLabels?.minutes || "Min" },
-        { value: timeLeft.seconds, label: pricingContent.countdownLabels?.seconds || "Sec" }
+        {
+          value: timeLeft.days,
+          label: pricingContent.countdownLabels?.days || 'Giorni',
+        },
+        {
+          value: timeLeft.hours,
+          label: pricingContent.countdownLabels?.hours || 'Ore',
+        },
+        {
+          value: timeLeft.minutes,
+          label: pricingContent.countdownLabels?.minutes || 'Min',
+        },
+        {
+          value: timeLeft.seconds,
+          label: pricingContent.countdownLabels?.seconds || 'Sec',
+        },
       ].map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
           <div className="bg-primary/20 border border-primary/40 rounded-lg min-w-[52px] sm:min-w-[60px] h-[52px] sm:h-[60px] flex items-center justify-center">
@@ -70,29 +88,36 @@ const CountdownTimer = ({ deadline }: { deadline: string }) => {
               {String(item.value).padStart(2, '0')}
             </span>
           </div>
-          <span className="text-xs text-muted-foreground mt-1">{item.label}</span>
+          <span className="text-xs text-muted-foreground mt-1">
+            {item.label}
+          </span>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
 export const PricingSection = () => {
-  const availableSpots = (pricingContent.urgency?.availability.total || 12) - (pricingContent.urgency?.availability.booked || 0);
-  const progressPercentage = ((pricingContent.urgency?.availability.booked || 0) / (pricingContent.urgency?.availability.total || 12)) * 100;
+  const availableSpots =
+    (pricingContent.urgency?.availability.total || 12) -
+    (pricingContent.urgency?.availability.booked || 0)
+  const progressPercentage =
+    ((pricingContent.urgency?.availability.booked || 0) /
+      (pricingContent.urgency?.availability.total || 12)) *
+    100
 
   // Load Luma script on mount if using embed
   useEffect(() => {
     if (pricingContent.luma?.useEmbed) {
-      loadLumaScript();
+      loadLumaScript()
     }
-  }, []);
+  }, [])
 
   return (
     <section className="container mx-auto px-4 py-20 overflow-x-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -128,7 +153,9 @@ export const PricingSection = () => {
               <div className="flex justify-center sm:justify-start mb-6 mt-8 sm:mt-0">
                 <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-4 py-2">
                   <Users className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span className="text-primary font-semibold text-sm">{pricingContent.inPersonBadge}</span>
+                  <span className="text-primary font-semibold text-sm">
+                    {pricingContent.inPersonBadge}
+                  </span>
                 </div>
               </div>
 
@@ -153,19 +180,26 @@ export const PricingSection = () => {
               {/* Countdown Timer */}
               {pricingContent.urgency?.countdown.enabled && (
                 <div className="bg-secondary/50 border border-primary/20 rounded-xl p-4 mb-6">
-                  <div className="flex items-center justify-center gap-2 mb-3">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-semibold">
-                      {pricingContent.urgency.countdown.text}:
+                  <div className="flex flex-col items-center gap-1 mb-3">
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-primary" />
+                      <span className="text-sm font-semibold">
+                        {pricingContent.urgency.countdown.text}
+                      </span>
+                    </div>
+                    <span className="text-lg font-bold text-primary">
+                      15 Gennaio 2026
                     </span>
                   </div>
-                  <CountdownTimer deadline={pricingContent.urgency.countdown.deadline} />
+                  <CountdownTimer
+                    deadline={pricingContent.urgency.countdown.deadline}
+                  />
                 </div>
               )}
 
               {/* Payment Options */}
               <div className="grid gap-3 mb-6">
-                {pricingContent.pricing.paymentOptions.map((option) => (
+                {pricingContent.pricing.paymentOptions.map(option => (
                   <div
                     key={option.id}
                     className={`border rounded-lg p-4 transition-all ${
@@ -178,17 +212,24 @@ export const PricingSection = () => {
                       <span className="font-semibold">{option.label}</span>
                       {option.recommended && (
                         <span className="text-xs font-bold text-primary bg-primary/20 px-2 py-1 rounded-full">
-                          {pricingContent.pricing.recommendedLabel || "CONSIGLIATO"}
+                          {pricingContent.pricing.recommendedLabel ||
+                            'CONSIGLIATO'}
                         </span>
                       )}
                     </div>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-bold text-primary">{option.price}</span>
+                      <span className="text-2xl font-bold text-primary">
+                        {option.price}
+                      </span>
                       {option.savings && (
-                        <span className="text-sm text-green-400">• {option.savings}</span>
+                        <span className="text-sm text-green-400">
+                          • {option.savings}
+                        </span>
                       )}
                       {option.total && (
-                        <span className="text-sm text-muted-foreground">({option.total})</span>
+                        <span className="text-sm text-muted-foreground">
+                          ({option.total})
+                        </span>
                       )}
                     </div>
                   </div>
@@ -206,14 +247,10 @@ export const PricingSection = () => {
                   {pricingContent.cta.primary}
                 </a>
               ) : (
-                <Button 
-                  size="lg" 
-                  className="w-full mb-4 text-lg h-14"
-                  asChild
-                >
-                  <a 
-                    href={pricingContent.luma?.eventUrl || "#"} 
-                    target="_blank" 
+                <Button size="lg" className="w-full mb-4 text-lg h-14" asChild>
+                  <a
+                    href={pricingContent.luma?.eventUrl || '#'}
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     {pricingContent.cta.primary}
@@ -242,7 +279,8 @@ export const PricingSection = () => {
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-semibold">
-                    {pricingContent.urgency.availability.progressTitle || "Disponibilità Posti"}
+                    {pricingContent.urgency.availability.progressTitle ||
+                      'Disponibilità Posti'}
                   </span>
                   <span className="text-sm text-primary font-bold">
                     {availableSpots} {pricingContent.urgency.availability.label}
@@ -255,7 +293,11 @@ export const PricingSection = () => {
                   />
                 </div>
                 <p className="text-xs text-muted-foreground mt-2 text-center">
-                  {pricingContent.urgency.availability.booked} {pricingContent.urgency.availability.bookedText || "su"} {pricingContent.urgency.availability.total} {pricingContent.urgency.availability.bookedSuffix || "posti già prenotati"}
+                  {pricingContent.urgency.availability.booked}{' '}
+                  {pricingContent.urgency.availability.bookedText || 'su'}{' '}
+                  {pricingContent.urgency.availability.total}{' '}
+                  {pricingContent.urgency.availability.bookedSuffix ||
+                    'posti già prenotati'}
                 </p>
               </motion.div>
             )}
@@ -271,7 +313,9 @@ export const PricingSection = () => {
           >
             {/* What's Included */}
             <Card className="bg-card border border-primary/20 p-6">
-              <h4 className="font-bold text-lg mb-4">{pricingContent.included.title}</h4>
+              <h4 className="font-bold text-lg mb-4">
+                {pricingContent.included.title}
+              </h4>
               <ul className="space-y-3">
                 {pricingContent.included.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-sm">
@@ -303,5 +347,5 @@ export const PricingSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
