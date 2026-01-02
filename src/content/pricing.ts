@@ -96,7 +96,7 @@ export const pricingContent = {
   cta: {
     primary: 'Prenota il Posto #3/12',
     secondary: 'Oppure scrivici su Telegram',
-    telegram: 'https://t.me/glitchacademy',
+    telegram: 'https://t.me/glitchsociety_dev',
   },
 
   priceDetails:

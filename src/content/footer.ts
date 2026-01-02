@@ -18,7 +18,7 @@ export const footerContent = {
     {
       icon: 'telegram',
       label: 'Telegram',
-      url: 'https://t.me/glitchacademy',
+      url: 'https://t.me/glitchsociety_dev',
     },
   ],
   navigation: [
@@ -29,7 +29,7 @@ export const footerContent = {
           label: 'Documentazione',
           url: 'https://www.notion.so/GL-TCH-Programma-28fabf63ca0c80aca9d0e6754512dde2',
         },
-        { label: 'Community Telegram', url: 'https://t.me/glitchacademy' },
+        { label: 'Community Telegram', url: 'https://t.me/glitchsociety_dev' },
       ],
     },
     // {
