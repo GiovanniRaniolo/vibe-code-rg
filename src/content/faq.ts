@@ -19,7 +19,7 @@ export const faqContent = {
       id: 'item-3',
       question: 'Cosa succede se perdo una lezione?',
       answer:
-        'Accesso lifetime alle registrazioni per recuperare. Ma consiglio forte: partecipa live per code review in tempo reale, debugging assistito e networking con gli altri partecipanti. Il valore è nella presenza.',
+        'Contatta i docenti per un recap personalizzato e usa la community Telegram per recuperare. Ma consiglio forte: partecipa live per code review in tempo reale, debugging assistito e networking con gli altri partecipanti. Il valore è nella presenza.',
     },
     {
       id: 'item-4',

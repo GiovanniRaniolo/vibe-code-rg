@@ -79,7 +79,6 @@ export const pricingContent = {
       'Community Telegram lifetime',
       'Code review 1-to-1 del tuo MVP',
       'Certificato di completamento',
-      'Registrazioni lifetime delle lezioni',
       'Materiali didattici e cheat sheet',
       'Supporto post-corso fino al deploy MVP',
     ],

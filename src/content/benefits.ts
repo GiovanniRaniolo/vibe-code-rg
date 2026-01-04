@@ -35,7 +35,7 @@ export const benefitsContent = {
       },
       {
         icon: 'globe',
-        text: 'Certificato di completamento + accesso alle registrazioni',
+        text: 'Certificato di completamento riconosciuto',
       },
       {
         icon: 'bookOpen',
