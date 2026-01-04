@@ -7,7 +7,7 @@ export const locationContent = {
   },
   address: {
     label: "Indirizzo",
-    street: "via Benedetto Brin, 13",
+    street: "via Benedetto Brin, 8",
     city: "Marina di Ragusa (RG)",
     country: "Italia"
   },
@@ -23,5 +23,5 @@ export const locationContent = {
   mapButton: {
     text: "Visualizza su Google Maps"
   },
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+13+Marina+di+Ragusa+RG+Italia"
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+8+Marina+di+Ragusa+RG+Italia"
 };

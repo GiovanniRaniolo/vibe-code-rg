@@ -13,7 +13,7 @@ export const faqContent = {
       id: 'item-2',
       question: 'Dove si tiene il corso e quando?',
       answer:
-        'IN PRESENZA a Marina di Ragusa (RG) presso Eretico, via Benedetto Brin 13 - una vineria sonica trasformata in hub tech. Prima lezione: 7 Febbraio 2026, ogni sabato pomeriggio dalle 15:00 alle 18:00 per 7 settimane consecutive.',
+        'IN PRESENZA a Marina di Ragusa (RG) presso Eretico, via Benedetto Brin 8 - una vineria sonica trasformata in hub tech. Prima lezione: 7 Febbraio 2026, ogni sabato pomeriggio dalle 15:00 alle 18:00 per 7 settimane consecutive.',
     },
     {
       id: 'item-3',
