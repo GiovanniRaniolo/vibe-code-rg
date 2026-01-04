@@ -1,27 +1,29 @@
 export const locationContent = {
-  title: "Dove Si Tiene il Corso",
+  title: 'Dove Si Tiene il Corso',
   venue: {
-    name: "ERETICO",
-    logo: "/eretico.png",
-    description: "Non un'aula sterile: una vineria sonica a Marina di Ragusa. Coding, convivialità e networking autentico incluso"
+    name: 'ERETICO',
+    logo: '/eretico.png',
+    description:
+      "Non un'aula sterile: una vineria sonica a Marina di Ragusa. Coding, convivialità e networking autentico incluso",
   },
   address: {
-    label: "Indirizzo",
-    street: "via Benedetto Brin, 8",
-    city: "Marina di Ragusa (RG)",
-    country: "Italia"
+    label: 'Indirizzo',
+    street: 'via Benedetto Brin, 8',
+    city: 'Marina di Ragusa (RG)',
+    country: 'Italia',
   },
   contact: {
-    label: "Telefono",
-    phone: "+39 320 1806418",
-    phoneDisplay: "+39 320 180 6418"
+    label: 'Telefono',
+    phone: '+39 320 1806418',
+    phoneDisplay: '+39 320 180 6418',
   },
   social: {
-    label: "Instagram",
-    url: "https://www.instagram.com/ereticovineriasonica/"
+    label: 'Instagram',
+    url: 'https://www.instagram.com/ereticovineriasonica/',
   },
   mapButton: {
-    text: "Visualizza su Google Maps"
+    text: 'Visualizza su Google Maps',
   },
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+8+Marina+di+Ragusa+RG+Italia"
-};
+  mapUrl:
+    'https://www.google.com/maps/search/?api=1&query=via+Benedetto+Brin+8+Marina+di+Ragusa+RG+Italia',
+}
