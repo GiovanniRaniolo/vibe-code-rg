@@ -1,3 +1,5 @@
+import { courseData } from './course'
+
 export const pricingContent = {
   title: 'Investi nel Tuo Futuro',
   subtitle: '21 ore che ti danno autonomia completa come developer.',
@@ -14,12 +16,13 @@ export const pricingContent = {
     countdown: {
       enabled: true,
       text: 'Sconto valido fino al',
-      deadline: '2026-01-15T23:59:59', // 15 Gennaio 2026
+      deadline: courseData.earlyBird.deadline,
+      deadlineDisplay: courseData.earlyBird.deadlineDisplay,
       expiredText: 'Offerta scaduta - prezzo standard applicato',
     },
     availability: {
-      total: 12,
-      booked: 2,
+      total: courseData.seats.total,
+      booked: courseData.seats.booked,
       label: 'posti rimasti',
       urgencyThreshold: 5, // Mostra urgency quando rimangono <= 5 posti
       soldOutText: "SOLD OUT - Lista d'attesa disponibile",
@@ -36,14 +39,14 @@ export const pricingContent = {
     price: '€400',
     originalPrice: null, // Rimuovi barrato per più credibilità
     duration: '7 LEZIONI × 3 ORE',
-    priceNote: 'Early Bird fino al 15 Gennaio',
+    priceNote: `Early Bird fino al ${courseData.earlyBird.deadlineDisplay}`,
   },
 
   pricing: {
     mainPrice: '€400',
     priceLabel: 'Prezzo Early Bird',
     standardPrice: '€500',
-    standardPriceLabel: '(Prezzo standard dopo il 15 Gennaio)',
+    standardPriceLabel: `(Prezzo standard dopo il ${courseData.earlyBird.deadlineDisplay})`,
     recommendedLabel: 'CONSIGLIATO',
 
     paymentOptions: [
@@ -93,7 +96,7 @@ export const pricingContent = {
   },
 
   cta: {
-    primary: 'Prenota il Posto #3/12',
+    primary: courseData.ctaText,
     secondary: 'Oppure scrivici su Telegram',
     telegram: 'https://t.me/glitchsociety_dev',
   },

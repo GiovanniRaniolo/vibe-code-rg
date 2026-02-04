@@ -188,7 +188,7 @@ export const PricingSection = () => {
                       </span>
                     </div>
                     <span className="text-lg font-bold text-primary">
-                      15 Gennaio 2026
+                      {pricingContent.urgency.countdown.deadlineDisplay}
                     </span>
                   </div>
                   <CountdownTimer

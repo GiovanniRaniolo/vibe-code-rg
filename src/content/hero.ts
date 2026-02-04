@@ -1,3 +1,5 @@
+import { courseData } from './course'
+
 export const heroContent = {
   title: {
     part1: 'Sviluppo Web',
@@ -14,8 +16,8 @@ export const heroContent = {
     format: 'Formazione in Presenza',
     duration: '21h Intensive',
   },
-  availability: '7 FEBBRAIO 2026 • ULTIMI 10 POSTI',
-  cta: 'Prenota il Posto #3/12',
+  availability: courseData.availabilityText,
+  cta: courseData.ctaText,
   browserTitle: 'AI-Powered Full Stack Development',
   browserText: 'FULL STACK\nWITH AI',
 }

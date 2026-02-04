@@ -1,3 +1,5 @@
+import { courseData } from './course'
+
 export const faqContent = {
   title: 'Domande Frequenti',
   subtitle: 'Tutto quello che devi sapere prima di iniziare',
@@ -12,8 +14,7 @@ export const faqContent = {
     {
       id: 'item-2',
       question: 'Dove si tiene il corso e quando?',
-      answer:
-        'IN PRESENZA a Marina di Ragusa (RG) presso Eretico, via Benedetto Brin 8 - una vineria sonica trasformata in hub tech. Prima lezione: 7 Febbraio 2026, ogni sabato pomeriggio dalle 15:00 alle 18:00 per 7 settimane consecutive.',
+      answer: `IN PRESENZA a ${courseData.location.city} presso ${courseData.location.name}, ${courseData.location.address} - ${courseData.location.description}. Prima lezione: ${courseData.startDate}, ogni ${courseData.schedule.day} pomeriggio dalle ${courseData.schedule.time} per ${courseData.schedule.weeks} settimane consecutive.`,
     },
     {
       id: 'item-3',
